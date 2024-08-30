@@ -1,0 +1,1357 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; object-src 'none'; script-src resource: chrome:; connect-src https:; img-src https: data: blob: chrome:; style-src 'unsafe-inline';">
+    <meta name="color-scheme" content="light dark">
+    <title data-l10n-id="newtab-page-title"></title>
+    <link rel="icon" type="image/png" href="chrome://branding/content/icon32.png"/>
+    <link rel="localization" href="branding/brand.ftl" />
+    <link rel="localization" href="toolkit/branding/brandings.ftl" />
+    <link rel="localization" href="browser/newtab/newtab.ftl" />
+    <link rel="stylesheet" href="chrome://global/skin/design-system/tokens-brand.css">
+    <link rel="stylesheet" href="chrome://browser/content/contentSearchUI.css" />
+    <link rel="stylesheet" href="chrome://activity-stream/content/css/activity-stream.css" />
+  </head>
+  <!-- Cached: Thu, 29 Aug 2024 18:52:53 GMT -->
+  <body class="activity-stream">
+    <div id="header-asrouter-container" role="presentation"></div>
+    <div id="root">
+      <div><span><button class="icon icon-settings personalize-button" data-l10n-id="newtab-personalize-icon-label"></button><div class="customize-menu" role="dialog" data-l10n-id="newtab-personalize-dialog-label"><button class="close-button" data-l10n-id="newtab-custom-close-button"></button><div></div><div class="home-section"><div id="shortcuts-section" class="section"><moz-toggle id="shortcuts-toggle" pressed="true" onToggle="function() {
+    [native code]
+}" data-preference="feeds.topsites" data-eventSource="TOP_SITES" data-l10n-id="newtab-custom-shortcuts-toggle" data-l10n-attrs="label, description"></moz-toggle><div><div class="more-info-top-wrapper"><div class="more-information"><select id="row-selector" class="selector" name="row-count" data-preference="topSitesRows" aria-labelledby="custom-shortcuts-title"><option selected="" value="1" data-l10n-id="newtab-custom-row-selector" data-l10n-args="{&quot;num&quot;: 1}"></option><option value="2" data-l10n-id="newtab-custom-row-selector" data-l10n-args="{&quot;num&quot;: 2}"></option><option value="3" data-l10n-id="newtab-custom-row-selector" data-l10n-args="{&quot;num&quot;: 3}"></option><option value="4" data-l10n-id="newtab-custom-row-selector" data-l10n-args="{&quot;num&quot;: 4}"></option></select><div class="check-wrapper" role="presentation"><input type="checkbox" id="sponsored-shortcuts" class="sponsored-checkbox" checked="" data-preference="showSponsoredTopSites" data-eventSource="SPONSORED_TOP_SITES"/><label class="sponsored" for="sponsored-shortcuts" data-l10n-id="newtab-custom-sponsored-sites"></label></div></div></div></div></div><div id="pocket-section" class="section"><label class="switch"><moz-toggle id="pocket-toggle" pressed="true" onToggle="function() {
+    [native code]
+}" aria-describedby="custom-pocket-subtitle" data-preference="feeds.section.topstories" data-eventSource="TOP_STORIES" data-l10n-id="newtab-custom-stories-toggle" data-l10n-attrs="label, description"></moz-toggle></label><div><div class="more-info-pocket-wrapper"><div class="more-information"><div class="check-wrapper" role="presentation"><input type="checkbox" id="sponsored-pocket" class="sponsored-checkbox" checked="" data-preference="showSponsored" data-eventSource="POCKET_SPOCS"/><label class="sponsored" for="sponsored-pocket" data-l10n-id="newtab-custom-pocket-sponsored"></label></div></div></div></div></div><div id="recent-section" class="section"><label class="switch"><moz-toggle id="highlights-toggle" onToggle="function() {
+    [native code]
+}" data-preference="feeds.section.highlights" data-eventSource="HIGHLIGHTS" data-l10n-id="newtab-custom-recent-toggle" data-l10n-attrs="label, description"></moz-toggle></label></div><span class="divider" role="separator"></span><div><button id="settings-link" class="external-link" data-l10n-id="newtab-custom-settings"></button></div></div></div></span><div class="outer-wrapper ds-outer-wrapper-search-alignment ds-outer-wrapper-breakpoint-override visible-logo"><main><div class="non-collapsible-section"><div class="search-wrapper"><div class="logo-and-wordmark"><div class="logo"></div><div class="wordmark"></div></div><div class="search-inner-wrapper"><button class="search-handoff-button" tabindex="-1"><div class="fake-textbox"></div><input type="search" class="fake-editable" tabindex="-1" aria-hidden="true"/><div class="fake-caret"></div></button></div></div></div><div class="body-wrapper on"><div class="discovery-stream ds-layout"><div class="ds-column ds-column-12"><div class="ds-column-grid"><div><div class="ds-top-sites"><section class="collapsible-section top-sites" data-section-id="topsites"><div class="section-top-bar"><h3 class="section-title-container " style="visibility:hidden"><span class="section-title"><span data-l10n-id="newtab-section-header-topsites"></span></span><span class="learn-more-link-wrapper"></span></h3></div><div><ul class="top-sites-list"><li class="top-site-outer placeholder  "><div class="top-site-inner"><a class="top-site-button" tabindex="0" draggable="true" data-is-sponsored-link="false"><div class="tile" aria-hidden="true"><div class="icon-wrapper"><div class=""></div></div></div><div class="title"><span dir="auto"><br/></span><span class="sponsored-label" data-l10n-id="newtab-topsite-sponsored"></span></div></a><div class="topsite-impression-observer"></div></div></li><li class="top-site-outer placeholder  "><div class="top-site-inner"><a class="top-site-button" tabindex="0" draggable="true" data-is-sponsored-link="false"><div class="tile" aria-hidden="true"><div class="icon-wrapper"><div class=""></div></div></div><div class="title"><span dir="auto"><br/></span><span class="sponsored-label" data-l10n-id="newtab-topsite-sponsored"></span></div></a><div class="topsite-impression-observer"></div></div></li><li class="top-site-outer"><div class="top-site-inner"><a class="top-site-button" href="https://code.visulastudio.com/" tabindex="0" draggable="true" data-is-sponsored-link="false"><div class="tile" aria-hidden="true"><div class="icon-wrapper letter-fallback" data-fallback="c" style="background-color:#FF7139"><div class=""></div></div></div><div class="title"><span dir="auto">code.visulastudio</span><span class="sponsored-label" data-l10n-id="newtab-topsite-sponsored"></span></div></a><div><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;code.visulastudio&quot;}" class="context-menu-button icon"></button></div><div class="topsite-impression-observer"></div></div></li><li class="top-site-outer"><div class="top-site-inner"><a class="top-site-button" href="https://www.youtube.com/" tabindex="0" draggable="true" data-is-sponsored-link="false"><div class="tile" aria-hidden="true"><div class="icon-wrapper" data-fallback="Y"><div class="top-site-icon rich-icon" style="background-image:url(chrome://activity-stream/content/data/content/tippytop/images/youtube-com@2x.png)"></div></div></div><div class="title"><span dir="auto">YouTube</span><span class="sponsored-label" data-l10n-id="newtab-topsite-sponsored"></span></div></a><div><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;YouTube&quot;}" class="context-menu-button icon"></button></div><div class="topsite-impression-observer"></div></div></li><li class="top-site-outer"><div class="top-site-inner"><a class="top-site-button" href="https://www.facebook.com/" tabindex="0" draggable="true" data-is-sponsored-link="false"><div class="tile" aria-hidden="true"><div class="icon-wrapper" data-fallback="F"><div class="top-site-icon rich-icon" style="background-image:url(chrome://activity-stream/content/data/content/tippytop/images/facebook-com@2x.png)"></div></div></div><div class="title"><span dir="auto">Facebook</span><span class="sponsored-label" data-l10n-id="newtab-topsite-sponsored"></span></div></a><div><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;Facebook&quot;}" class="context-menu-button icon"></button></div><div class="topsite-impression-observer"></div></div></li><li class="top-site-outer"><div class="top-site-inner"><a class="top-site-button" href="https://www.reddit.com/" tabindex="0" draggable="true" data-is-sponsored-link="false"><div class="tile" aria-hidden="true"><div class="icon-wrapper" data-fallback="R"><div class="top-site-icon rich-icon" style="background-image:url(chrome://activity-stream/content/data/content/tippytop/images/reddit-com@2x.png)"></div></div></div><div class="title"><span dir="auto">Reddit</span><span class="sponsored-label" data-l10n-id="newtab-topsite-sponsored"></span></div></a><div><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;Reddit&quot;}" class="context-menu-button icon"></button></div><div class="topsite-impression-observer"></div></div></li><li class="top-site-outer hide-for-narrow"><div class="top-site-inner"><a class="top-site-button" href="https://www.wikipedia.org/" tabindex="0" draggable="true" data-is-sponsored-link="false"><div class="tile" aria-hidden="true"><div class="icon-wrapper" data-fallback="W"><div class="top-site-icon rich-icon" style="background-image:url(chrome://activity-stream/content/data/content/tippytop/images/wikipedia-org@2x.png)"></div></div></div><div class="title"><span dir="auto">Wikipedia</span><span class="sponsored-label" data-l10n-id="newtab-topsite-sponsored"></span></div></a><div><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;Wikipedia&quot;}" class="context-menu-button icon"></button></div><div class="topsite-impression-observer"></div></div></li><li class="top-site-outer hide-for-narrow"><div class="top-site-inner"><a class="top-site-button" href="https://twitter.com/" tabindex="0" draggable="true" data-is-sponsored-link="false"><div class="tile" aria-hidden="true"><div class="icon-wrapper" data-fallback="T"><div class="top-site-icon rich-icon" style="background-image:url(chrome://activity-stream/content/data/content/tippytop/images/twitter-com@2x.png)"></div></div></div><div class="title"><span dir="auto">Twitter</span><span class="sponsored-label" data-l10n-id="newtab-topsite-sponsored"></span></div></a><div><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;Twitter&quot;}" class="context-menu-button icon"></button></div><div class="topsite-impression-observer"></div></div></li></ul><div class="edit-topsites-wrapper"></div></div></section></div></div></div></div><style data-styles="[[null]]"></style></div><section class="collapsible-section ds-layout" data-section-id="topstories"><div class="section-top-bar"><h3 class="section-title-container "><span class="section-title"><span data-l10n-id="newtab-section-header-stories"></span></span><span class="learn-more-link-wrapper"><span class="learn-more-link"><a href="https://getpocket.com/firefox/new_tab_learn_more" data-l10n-id="newtab-pocket-learn-more"></a></span></span></h3></div><div><div class="discovery-stream ds-layout"><div class="ds-column ds-column-12"><div class="ds-column-grid"><div><div><div class="ds-card-grid    ds-card-grid-include-descriptions "><article class="ds-card   ds-card-title-lines-3 ds-card-desc-lines-3  "><div class="img-wrapper"><picture class="ds-image
+       img
+      
+      
+    "><img loading="lazy" crossorigin="anonymous" sizes="(min-width: 1122px) 296px,(min-width: 866px) 218px,(max-width: 610px) 202px,202px" src="https://cdn.theatlantic.com/thumbor/NEKYNTZFx6wMkPDJotSdHuO7iSk=/0x58:2880x1558/1200x625/media/img/mt/2024/08/GOP_episode_art_civilrights_full/original.jpg" srcSet="https://img-getpocket.cdn.mozilla.net/296x148/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fcdn.theatlantic.com%2Fthumbor%2FNEKYNTZFx6wMkPDJotSdHuO7iSk%3D%2F0x58%3A2880x1558%2F1200x625%2Fmedia%2Fimg%2Fmt%2F2024%2F08%2FGOP_episode_art_civilrights_full%2Foriginal.jpg 296w,https://img-getpocket.cdn.mozilla.net/592x296/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fcdn.theatlantic.com%2Fthumbor%2FNEKYNTZFx6wMkPDJotSdHuO7iSk%3D%2F0x58%3A2880x1558%2F1200x625%2Fmedia%2Fimg%2Fmt%2F2024%2F08%2FGOP_episode_art_civilrights_full%2Foriginal.jpg 592w,https://img-getpocket.cdn.mozilla.net/218x109/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fcdn.theatlantic.com%2Fthumbor%2FNEKYNTZFx6wMkPDJotSdHuO7iSk%3D%2F0x58%3A2880x1558%2F1200x625%2Fmedia%2Fimg%2Fmt%2F2024%2F08%2FGOP_episode_art_civilrights_full%2Foriginal.jpg 218w,https://img-getpocket.cdn.mozilla.net/436x218/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fcdn.theatlantic.com%2Fthumbor%2FNEKYNTZFx6wMkPDJotSdHuO7iSk%3D%2F0x58%3A2880x1558%2F1200x625%2Fmedia%2Fimg%2Fmt%2F2024%2F08%2FGOP_episode_art_civilrights_full%2Foriginal.jpg 436w,https://img-getpocket.cdn.mozilla.net/202x101/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fcdn.theatlantic.com%2Fthumbor%2FNEKYNTZFx6wMkPDJotSdHuO7iSk%3D%2F0x58%3A2880x1558%2F1200x625%2Fmedia%2Fimg%2Fmt%2F2024%2F08%2FGOP_episode_art_civilrights_full%2Foriginal.jpg 202w,https://img-getpocket.cdn.mozilla.net/404x202/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fcdn.theatlantic.com%2Fthumbor%2FNEKYNTZFx6wMkPDJotSdHuO7iSk%3D%2F0x58%3A2880x1558%2F1200x625%2Fmedia%2Fimg%2Fmt%2F2024%2F08%2FGOP_episode_art_civilrights_full%2Foriginal.jpg 404w"/></picture></div><a href="https://www.theatlantic.com/podcasts/archive/2024/08/civil-rights-movement-law-slaves-court/679621/?utm_source=pocket-newtab-en-us" title="The Rights of American Slaves" class="ds-card-link"><div class="impression-observer"></div></a><div class="meta"><div class="info-wrap"><p class="source clamp">The Atlantic</p><header class="title clamp">The Rights of American Slaves</header><p class="excerpt clamp">The hidden history of how some enslaved people exercised legal rights</p></div></div><div class="card-stp-button-hover-background"><div class="card-stp-button-position-wrapper"><button class="card-stp-button"><span class="story-badge-icon icon icon-pocket-save"></span><span data-l10n-id="newtab-pocket-save"></span></button><div class="context-menu-position-container"><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;The Rights of American Slaves&quot;}" class="context-menu-button icon"></button></div></div></div></article><article class="ds-card   ds-card-title-lines-3 ds-card-desc-lines-3  "><div class="img-wrapper"><picture class="ds-image
+       img
+      
+      
+    "><img loading="lazy" crossorigin="anonymous" sizes="(min-width: 1122px) 296px,(min-width: 866px) 218px,(max-width: 610px) 202px,202px" src="https://s.zkcdn.net/Advertisers/13ad116b3104499ca63d5ab82e855726.png" srcSet="https://img-getpocket.cdn.mozilla.net/296x148/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs.zkcdn.net%2FAdvertisers%2F13ad116b3104499ca63d5ab82e855726.png 296w,https://img-getpocket.cdn.mozilla.net/592x296/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs.zkcdn.net%2FAdvertisers%2F13ad116b3104499ca63d5ab82e855726.png 592w,https://img-getpocket.cdn.mozilla.net/218x109/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs.zkcdn.net%2FAdvertisers%2F13ad116b3104499ca63d5ab82e855726.png 218w,https://img-getpocket.cdn.mozilla.net/436x218/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs.zkcdn.net%2FAdvertisers%2F13ad116b3104499ca63d5ab82e855726.png 436w,https://img-getpocket.cdn.mozilla.net/202x101/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs.zkcdn.net%2FAdvertisers%2F13ad116b3104499ca63d5ab82e855726.png 202w,https://img-getpocket.cdn.mozilla.net/404x202/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs.zkcdn.net%2FAdvertisers%2F13ad116b3104499ca63d5ab82e855726.png 404w"/></picture></div><a href="https://market-trk.com/50/9411?campaign=FF-SOV03-CompareCredit-BoATravel&amp;creative=CCBlondeWomanRed-0InterestUntilNearly2026-WithNoAnnualFeeAndNoInterestUntilNearly2026TheseCardsAreHelpingAmericansPayOffDebtInRecordTime-20240827" title="2 Cards Charging 0% Interest Until 2026" class="ds-card-link"><div class="impression-observer"></div></a><div class="meta"><div class="info-wrap"><p class="source clamp">comparecredit.com</p><header class="title clamp">2 Cards Charging 0% Interest Until 2026</header><p class="excerpt clamp">With no annual fee and no interest until 2026, these cards are helping Americans pay off debt in record time.</p></div><div class="story-footer"><p class="story-sponsored-label  clamp"><span data-l10n-args="{&quot;sponsor&quot;:&quot;CompareCredit™&quot;}" data-l10n-id="newtab-label-sponsored-by"></span></p></div></div><div class="card-stp-button-hover-background"><div class="card-stp-button-position-wrapper"><div class="context-menu-position-container"><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;2 Cards Charging 0% Interest Until 2026&quot;}" class="context-menu-button icon"></button></div></div></div></article><article class="ds-card   ds-card-title-lines-3 ds-card-desc-lines-3  "><div class="img-wrapper"><picture class="ds-image
+       img
+      
+      
+    "><img loading="lazy" crossorigin="anonymous" sizes="(min-width: 1122px) 296px,(min-width: 866px) 218px,(max-width: 610px) 202px,202px" src="https://s3.amazonaws.com/pocket-curatedcorpusapi-prod-images/30374318-79f0-496a-ac7b-c85112f685cb.jpeg" srcSet="https://img-getpocket.cdn.mozilla.net/296x148/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F30374318-79f0-496a-ac7b-c85112f685cb.jpeg 296w,https://img-getpocket.cdn.mozilla.net/592x296/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F30374318-79f0-496a-ac7b-c85112f685cb.jpeg 592w,https://img-getpocket.cdn.mozilla.net/218x109/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F30374318-79f0-496a-ac7b-c85112f685cb.jpeg 218w,https://img-getpocket.cdn.mozilla.net/436x218/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F30374318-79f0-496a-ac7b-c85112f685cb.jpeg 436w,https://img-getpocket.cdn.mozilla.net/202x101/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F30374318-79f0-496a-ac7b-c85112f685cb.jpeg 202w,https://img-getpocket.cdn.mozilla.net/404x202/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F30374318-79f0-496a-ac7b-c85112f685cb.jpeg 404w"/></picture></div><a href="https://getpocket.com/explore/item/to-fix-the-social-sciences-look-to-the-dark-ages-of-medicine?utm_source=pocket-newtab-en-us" title="To Fix the Social Sciences, Look to the “Dark Ages” of Medicine" class="ds-card-link"><div class="impression-observer"></div></a><div class="meta"><div class="info-wrap"><p class="source clamp">MIT Press Reader</p><header class="title clamp">To Fix the Social Sciences, Look to the “Dark Ages” of Medicine</header><p class="excerpt clamp">If medicine could break with its barbarous past, why shouldn’t the same path be open to the social sciences?</p></div></div><div class="card-stp-button-hover-background"><div class="card-stp-button-position-wrapper"><button class="card-stp-button"><span class="story-badge-icon icon icon-pocket-save"></span><span data-l10n-id="newtab-pocket-save"></span></button><div class="context-menu-position-container"><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;To Fix the Social Sciences, Look to the “Dark Ages” of Medicine&quot;}" class="context-menu-button icon"></button></div></div></div></article><article class="ds-card   ds-card-title-lines-3 ds-card-desc-lines-3  "><div class="img-wrapper"><picture class="ds-image
+       img
+      
+      
+    "><img loading="lazy" crossorigin="anonymous" sizes="(min-width: 1122px) 296px,(min-width: 866px) 218px,(max-width: 610px) 202px,202px" src="https://image.cnbcfm.com/api/v1/image/108017994-1723122166702-gettyimages-2039511761-be3i9166copy.jpeg?v=1723650580&amp;w=1920&amp;h=1080" srcSet="https://img-getpocket.cdn.mozilla.net/296x148/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fimage.cnbcfm.com%2Fapi%2Fv1%2Fimage%2F108017994-1723122166702-gettyimages-2039511761-be3i9166copy.jpeg%3Fv%3D1723650580%26w%3D1920%26h%3D1080 296w,https://img-getpocket.cdn.mozilla.net/592x296/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fimage.cnbcfm.com%2Fapi%2Fv1%2Fimage%2F108017994-1723122166702-gettyimages-2039511761-be3i9166copy.jpeg%3Fv%3D1723650580%26w%3D1920%26h%3D1080 592w,https://img-getpocket.cdn.mozilla.net/218x109/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fimage.cnbcfm.com%2Fapi%2Fv1%2Fimage%2F108017994-1723122166702-gettyimages-2039511761-be3i9166copy.jpeg%3Fv%3D1723650580%26w%3D1920%26h%3D1080 218w,https://img-getpocket.cdn.mozilla.net/436x218/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fimage.cnbcfm.com%2Fapi%2Fv1%2Fimage%2F108017994-1723122166702-gettyimages-2039511761-be3i9166copy.jpeg%3Fv%3D1723650580%26w%3D1920%26h%3D1080 436w,https://img-getpocket.cdn.mozilla.net/202x101/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fimage.cnbcfm.com%2Fapi%2Fv1%2Fimage%2F108017994-1723122166702-gettyimages-2039511761-be3i9166copy.jpeg%3Fv%3D1723650580%26w%3D1920%26h%3D1080 202w,https://img-getpocket.cdn.mozilla.net/404x202/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fimage.cnbcfm.com%2Fapi%2Fv1%2Fimage%2F108017994-1723122166702-gettyimages-2039511761-be3i9166copy.jpeg%3Fv%3D1723650580%26w%3D1920%26h%3D1080 404w"/></picture></div><a href="https://www.cnbc.com/2024/08/14/designer-dupe-demand-soars-a-sign-of-the-economic-times.html?utm_source=pocket-newtab-en-us" title="Designer ‘Dupes’ Go Mainstream As Shoppers Choose Affordability Over Luxury" class="ds-card-link"><div class="impression-observer"></div></a><div class="meta"><div class="info-wrap"><p class="source clamp">CNBC</p><header class="title clamp">Designer ‘Dupes’ Go Mainstream As Shoppers Choose Affordability Over Luxury</header><p class="excerpt clamp">More shoppers are buying dupes on TikTok Shop and other ecommerce platforms as a way to participate in a trend without breaking the bank.</p></div></div><div class="card-stp-button-hover-background"><div class="card-stp-button-position-wrapper"><button class="card-stp-button"><span class="story-badge-icon icon icon-pocket-save"></span><span data-l10n-id="newtab-pocket-save"></span></button><div class="context-menu-position-container"><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;Designer ‘Dupes’ Go Mainstream As Shoppers Choose Affordability Over Luxury&quot;}" class="context-menu-button icon"></button></div></div></div></article><article class="ds-card   ds-card-title-lines-3 ds-card-desc-lines-3  "><div class="img-wrapper"><picture class="ds-image
+       img
+      
+      
+    "><img loading="lazy" crossorigin="anonymous" sizes="(min-width: 1122px) 296px,(min-width: 866px) 218px,(max-width: 610px) 202px,202px" src="https://www.usatoday.com/gcdn/authoring/authoring-images/2024/04/25/USAT/73448000007-usatsi-23103657-168401916-lowres.jpg?crop=2999,1687,x0,y156&amp;width=2999&amp;height=1687&amp;format=pjpg&amp;auto=webp" srcSet="https://img-getpocket.cdn.mozilla.net/296x148/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fwww.usatoday.com%2Fgcdn%2Fauthoring%2Fauthoring-images%2F2024%2F04%2F25%2FUSAT%2F73448000007-usatsi-23103657-168401916-lowres.jpg%3Fcrop%3D2999%2C1687%2Cx0%2Cy156%26width%3D2999%26height%3D1687%26format%3Dpjpg%26auto%3Dwebp 296w,https://img-getpocket.cdn.mozilla.net/592x296/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fwww.usatoday.com%2Fgcdn%2Fauthoring%2Fauthoring-images%2F2024%2F04%2F25%2FUSAT%2F73448000007-usatsi-23103657-168401916-lowres.jpg%3Fcrop%3D2999%2C1687%2Cx0%2Cy156%26width%3D2999%26height%3D1687%26format%3Dpjpg%26auto%3Dwebp 592w,https://img-getpocket.cdn.mozilla.net/218x109/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fwww.usatoday.com%2Fgcdn%2Fauthoring%2Fauthoring-images%2F2024%2F04%2F25%2FUSAT%2F73448000007-usatsi-23103657-168401916-lowres.jpg%3Fcrop%3D2999%2C1687%2Cx0%2Cy156%26width%3D2999%26height%3D1687%26format%3Dpjpg%26auto%3Dwebp 218w,https://img-getpocket.cdn.mozilla.net/436x218/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fwww.usatoday.com%2Fgcdn%2Fauthoring%2Fauthoring-images%2F2024%2F04%2F25%2FUSAT%2F73448000007-usatsi-23103657-168401916-lowres.jpg%3Fcrop%3D2999%2C1687%2Cx0%2Cy156%26width%3D2999%26height%3D1687%26format%3Dpjpg%26auto%3Dwebp 436w,https://img-getpocket.cdn.mozilla.net/202x101/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fwww.usatoday.com%2Fgcdn%2Fauthoring%2Fauthoring-images%2F2024%2F04%2F25%2FUSAT%2F73448000007-usatsi-23103657-168401916-lowres.jpg%3Fcrop%3D2999%2C1687%2Cx0%2Cy156%26width%3D2999%26height%3D1687%26format%3Dpjpg%26auto%3Dwebp 202w,https://img-getpocket.cdn.mozilla.net/404x202/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fwww.usatoday.com%2Fgcdn%2Fauthoring%2Fauthoring-images%2F2024%2F04%2F25%2FUSAT%2F73448000007-usatsi-23103657-168401916-lowres.jpg%3Fcrop%3D2999%2C1687%2Cx0%2Cy156%26width%3D2999%26height%3D1687%26format%3Dpjpg%26auto%3Dwebp 404w"/></picture></div><a href="https://www.usatoday.com/story/news/education/2024/08/26/college-palestinian-protests/74873260007/?utm_source=pocket-newtab-en-us" title="Will Protests Tied to Israel-Hamas War Return? Colleges Are Bracing Either Way." class="ds-card-link"><div class="impression-observer"></div></a><div class="meta"><div class="info-wrap"><p class="source clamp">USA TODAY</p><header class="title clamp">Will Protests Tied to Israel-Hamas War Return? Colleges Are Bracing Either Way.</header><p class="excerpt clamp">As college students return to campus this fall, administrators’ responses to protests vary.</p></div></div><div class="card-stp-button-hover-background"><div class="card-stp-button-position-wrapper"><button class="card-stp-button"><span class="story-badge-icon icon icon-pocket-save"></span><span data-l10n-id="newtab-pocket-save"></span></button><div class="context-menu-position-container"><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;Will Protests Tied to Israel-Hamas War Return? Colleges Are Bracing Either Way.&quot;}" class="context-menu-button icon"></button></div></div></div></article><article class="ds-card   ds-card-title-lines-3 ds-card-desc-lines-3  "><div class="img-wrapper"><picture class="ds-image
+       img
+      
+      
+    "><img loading="lazy" crossorigin="anonymous" sizes="(min-width: 1122px) 296px,(min-width: 866px) 218px,(max-width: 610px) 202px,202px" src="https://ca-times.brightspotcdn.com/dims4/default/dc87e10/2147483647/strip/true/crop/7299x3832+0+518/resize/1200x630!/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2Fc6%2Ff1%2F3b91736d4e558eac767ca53ab180%2F1285494-bk-lat-fob-day-1-roaming-1093.jpg" srcSet="https://img-getpocket.cdn.mozilla.net/296x148/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fca-times.brightspotcdn.com%2Fdims4%2Fdefault%2Fdc87e10%2F2147483647%2Fstrip%2Ftrue%2Fcrop%2F7299x3832%2B0%2B518%2Fresize%2F1200x630!%2Fquality%2F75%2F%3Furl%3Dhttps%253A%252F%252Fcalifornia-times-brightspot.s3.amazonaws.com%252Fc6%252Ff1%252F3b91736d4e558eac767ca53ab180%252F1285494-bk-lat-fob-day-1-roaming-1093.jpg 296w,https://img-getpocket.cdn.mozilla.net/592x296/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fca-times.brightspotcdn.com%2Fdims4%2Fdefault%2Fdc87e10%2F2147483647%2Fstrip%2Ftrue%2Fcrop%2F7299x3832%2B0%2B518%2Fresize%2F1200x630!%2Fquality%2F75%2F%3Furl%3Dhttps%253A%252F%252Fcalifornia-times-brightspot.s3.amazonaws.com%252Fc6%252Ff1%252F3b91736d4e558eac767ca53ab180%252F1285494-bk-lat-fob-day-1-roaming-1093.jpg 592w,https://img-getpocket.cdn.mozilla.net/218x109/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fca-times.brightspotcdn.com%2Fdims4%2Fdefault%2Fdc87e10%2F2147483647%2Fstrip%2Ftrue%2Fcrop%2F7299x3832%2B0%2B518%2Fresize%2F1200x630!%2Fquality%2F75%2F%3Furl%3Dhttps%253A%252F%252Fcalifornia-times-brightspot.s3.amazonaws.com%252Fc6%252Ff1%252F3b91736d4e558eac767ca53ab180%252F1285494-bk-lat-fob-day-1-roaming-1093.jpg 218w,https://img-getpocket.cdn.mozilla.net/436x218/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fca-times.brightspotcdn.com%2Fdims4%2Fdefault%2Fdc87e10%2F2147483647%2Fstrip%2Ftrue%2Fcrop%2F7299x3832%2B0%2B518%2Fresize%2F1200x630!%2Fquality%2F75%2F%3Furl%3Dhttps%253A%252F%252Fcalifornia-times-brightspot.s3.amazonaws.com%252Fc6%252Ff1%252F3b91736d4e558eac767ca53ab180%252F1285494-bk-lat-fob-day-1-roaming-1093.jpg 436w,https://img-getpocket.cdn.mozilla.net/202x101/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fca-times.brightspotcdn.com%2Fdims4%2Fdefault%2Fdc87e10%2F2147483647%2Fstrip%2Ftrue%2Fcrop%2F7299x3832%2B0%2B518%2Fresize%2F1200x630!%2Fquality%2F75%2F%3Furl%3Dhttps%253A%252F%252Fcalifornia-times-brightspot.s3.amazonaws.com%252Fc6%252Ff1%252F3b91736d4e558eac767ca53ab180%252F1285494-bk-lat-fob-day-1-roaming-1093.jpg 202w,https://img-getpocket.cdn.mozilla.net/404x202/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fca-times.brightspotcdn.com%2Fdims4%2Fdefault%2Fdc87e10%2F2147483647%2Fstrip%2Ftrue%2Fcrop%2F7299x3832%2B0%2B518%2Fresize%2F1200x630!%2Fquality%2F75%2F%3Furl%3Dhttps%253A%252F%252Fcalifornia-times-brightspot.s3.amazonaws.com%252Fc6%252Ff1%252F3b91736d4e558eac767ca53ab180%252F1285494-bk-lat-fob-day-1-roaming-1093.jpg 404w"/></picture></div><a href="https://www.latimes.com/california/story/2024-08-28/they-called-him-chandler-and-a-moron-matthew-perry-was-exploited-before-his-death-feds-say?utm_source=pocket-newtab-en-us" title="They Mocked Him As ‘Chandler’ and ‘Moron’ " class="ds-card-link"><div class="impression-observer"></div></a><div class="meta"><div class="info-wrap"><p class="source clamp">Los Angeles Times</p><header class="title clamp">They Mocked Him As ‘Chandler’ and ‘Moron’ </header><p class="excerpt clamp">Federal authorities have depicted a scheme in which medical professionals and street dealers exploited the “Friends” actor, who had been open about his years-long struggle with addiction, to enrich themselves. </p></div></div><div class="card-stp-button-hover-background"><div class="card-stp-button-position-wrapper"><button class="card-stp-button"><span class="story-badge-icon icon icon-pocket-save"></span><span data-l10n-id="newtab-pocket-save"></span></button><div class="context-menu-position-container"><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;They Mocked Him As ‘Chandler’ and ‘Moron’ &quot;}" class="context-menu-button icon"></button></div></div></div></article><article class="ds-card   ds-card-title-lines-3 ds-card-desc-lines-3  "><div class="img-wrapper"><picture class="ds-image
+       img
+      
+      
+    "><img loading="lazy" crossorigin="anonymous" sizes="(min-width: 1122px) 296px,(min-width: 866px) 218px,(max-width: 610px) 202px,202px" src="https://static.scientificamerican.com/dam/m/1d2d0064663f6405/original/SA_Aging-40-and-60-years-old.jpg?w=1200" srcSet="https://img-getpocket.cdn.mozilla.net/296x148/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fstatic.scientificamerican.com%2Fdam%2Fm%2F1d2d0064663f6405%2Foriginal%2FSA_Aging-40-and-60-years-old.jpg%3Fw%3D1200 296w,https://img-getpocket.cdn.mozilla.net/592x296/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fstatic.scientificamerican.com%2Fdam%2Fm%2F1d2d0064663f6405%2Foriginal%2FSA_Aging-40-and-60-years-old.jpg%3Fw%3D1200 592w,https://img-getpocket.cdn.mozilla.net/218x109/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fstatic.scientificamerican.com%2Fdam%2Fm%2F1d2d0064663f6405%2Foriginal%2FSA_Aging-40-and-60-years-old.jpg%3Fw%3D1200 218w,https://img-getpocket.cdn.mozilla.net/436x218/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fstatic.scientificamerican.com%2Fdam%2Fm%2F1d2d0064663f6405%2Foriginal%2FSA_Aging-40-and-60-years-old.jpg%3Fw%3D1200 436w,https://img-getpocket.cdn.mozilla.net/202x101/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fstatic.scientificamerican.com%2Fdam%2Fm%2F1d2d0064663f6405%2Foriginal%2FSA_Aging-40-and-60-years-old.jpg%3Fw%3D1200 202w,https://img-getpocket.cdn.mozilla.net/404x202/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fstatic.scientificamerican.com%2Fdam%2Fm%2F1d2d0064663f6405%2Foriginal%2FSA_Aging-40-and-60-years-old.jpg%3Fw%3D1200 404w"/></picture></div><a href="https://www.scientificamerican.com/article/drastic-molecular-shifts-in-peoples-40s-and-60s-might-explain-age-related/?utm_source=pocket-newtab-en-us" title="Why Aging Comes in Dramatic Waves in Our 40s and 60s" class="ds-card-link"><div class="impression-observer"></div></a><div class="meta"><div class="info-wrap"><p class="source clamp">Scientific American</p><header class="title clamp">Why Aging Comes in Dramatic Waves in Our 40s and 60s</header><p class="excerpt clamp">A new study suggests that waves of aging-related changes occur at two distinct points in our life</p></div></div><div class="card-stp-button-hover-background"><div class="card-stp-button-position-wrapper"><button class="card-stp-button"><span class="story-badge-icon icon icon-pocket-save"></span><span data-l10n-id="newtab-pocket-save"></span></button><div class="context-menu-position-container"><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;Why Aging Comes in Dramatic Waves in Our 40s and 60s&quot;}" class="context-menu-button icon"></button></div></div></div></article><article class="ds-card   ds-card-title-lines-3 ds-card-desc-lines-3  "><div class="img-wrapper"><picture class="ds-image
+       img
+      
+      
+    "><img loading="lazy" crossorigin="anonymous" sizes="(min-width: 1122px) 296px,(min-width: 866px) 218px,(max-width: 610px) 202px,202px" src="https://api.time.com/wp-content/uploads/2024/08/1_-MOUNTAIN_CiurejLochman_FINAL.jpeg?quality=85&amp;w=1200&amp;h=628&amp;crop=1" srcSet="https://img-getpocket.cdn.mozilla.net/296x148/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fapi.time.com%2Fwp-content%2Fuploads%2F2024%2F08%2F1_-MOUNTAIN_CiurejLochman_FINAL.jpeg%3Fquality%3D85%26w%3D1200%26h%3D628%26crop%3D1 296w,https://img-getpocket.cdn.mozilla.net/592x296/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fapi.time.com%2Fwp-content%2Fuploads%2F2024%2F08%2F1_-MOUNTAIN_CiurejLochman_FINAL.jpeg%3Fquality%3D85%26w%3D1200%26h%3D628%26crop%3D1 592w,https://img-getpocket.cdn.mozilla.net/218x109/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fapi.time.com%2Fwp-content%2Fuploads%2F2024%2F08%2F1_-MOUNTAIN_CiurejLochman_FINAL.jpeg%3Fquality%3D85%26w%3D1200%26h%3D628%26crop%3D1 218w,https://img-getpocket.cdn.mozilla.net/436x218/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fapi.time.com%2Fwp-content%2Fuploads%2F2024%2F08%2F1_-MOUNTAIN_CiurejLochman_FINAL.jpeg%3Fquality%3D85%26w%3D1200%26h%3D628%26crop%3D1 436w,https://img-getpocket.cdn.mozilla.net/202x101/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fapi.time.com%2Fwp-content%2Fuploads%2F2024%2F08%2F1_-MOUNTAIN_CiurejLochman_FINAL.jpeg%3Fquality%3D85%26w%3D1200%26h%3D628%26crop%3D1 202w,https://img-getpocket.cdn.mozilla.net/404x202/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fapi.time.com%2Fwp-content%2Fuploads%2F2024%2F08%2F1_-MOUNTAIN_CiurejLochman_FINAL.jpeg%3Fquality%3D85%26w%3D1200%26h%3D628%26crop%3D1 404w"/></picture></div><a href="https://time.com/7007857/ultra-processed-foods-advocate/?utm_source=pocket-newtab-en-us" title="What If Ultra-Processed Foods Aren’t As Bad As You Think?" class="ds-card-link"><div class="impression-observer"></div></a><div class="meta"><div class="info-wrap"><p class="source clamp">Time</p><header class="title clamp">What If Ultra-Processed Foods Aren’t As Bad As You Think?</header><p class="excerpt clamp">Not all ultra-processed foods are the same.</p></div></div><div class="card-stp-button-hover-background"><div class="card-stp-button-position-wrapper"><button class="card-stp-button"><span class="story-badge-icon icon icon-pocket-save"></span><span data-l10n-id="newtab-pocket-save"></span></button><div class="context-menu-position-container"><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;What If Ultra-Processed Foods Aren’t As Bad As You Think?&quot;}" class="context-menu-button icon"></button></div></div></div></article><article class="ds-card   ds-card-title-lines-3 ds-card-desc-lines-3  "><div class="img-wrapper"><picture class="ds-image
+       img
+      
+      
+    "><img loading="lazy" crossorigin="anonymous" sizes="(min-width: 1122px) 296px,(min-width: 866px) 218px,(max-width: 610px) 202px,202px" src="https://ichef.bbci.co.uk/images/ic/480xn/p0jl95jn.jpg.webp" srcSet="https://img-getpocket.cdn.mozilla.net/296x148/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fichef.bbci.co.uk%2Fimages%2Fic%2F480xn%2Fp0jl95jn.jpg.webp 296w,https://img-getpocket.cdn.mozilla.net/592x296/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fichef.bbci.co.uk%2Fimages%2Fic%2F480xn%2Fp0jl95jn.jpg.webp 592w,https://img-getpocket.cdn.mozilla.net/218x109/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fichef.bbci.co.uk%2Fimages%2Fic%2F480xn%2Fp0jl95jn.jpg.webp 218w,https://img-getpocket.cdn.mozilla.net/436x218/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fichef.bbci.co.uk%2Fimages%2Fic%2F480xn%2Fp0jl95jn.jpg.webp 436w,https://img-getpocket.cdn.mozilla.net/202x101/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fichef.bbci.co.uk%2Fimages%2Fic%2F480xn%2Fp0jl95jn.jpg.webp 202w,https://img-getpocket.cdn.mozilla.net/404x202/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fichef.bbci.co.uk%2Fimages%2Fic%2F480xn%2Fp0jl95jn.jpg.webp 404w"/></picture></div><a href="https://www.bbc.com/future/article/20240823-why-some-people-are-volunteering-to-be-infected-with-diseases?utm_source=pocket-newtab-en-us" title="Why Some People Are Volunteering to Be Infected With Diseases" class="ds-card-link"><div class="impression-observer"></div></a><div class="meta"><div class="info-wrap"><p class="source clamp">BBC</p><header class="title clamp">Why Some People Are Volunteering to Be Infected With Diseases</header><p class="excerpt clamp">Scientists are turning to a controversial approach to test new vaccines and treatments by deliberately infecting volunteers with potentially deadly viruses, parasites and bacteria.</p></div></div><div class="card-stp-button-hover-background"><div class="card-stp-button-position-wrapper"><button class="card-stp-button"><span class="story-badge-icon icon icon-pocket-save"></span><span data-l10n-id="newtab-pocket-save"></span></button><div class="context-menu-position-container"><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;Why Some People Are Volunteering to Be Infected With Diseases&quot;}" class="context-menu-button icon"></button></div></div></div></article><article class="ds-card   ds-card-title-lines-3 ds-card-desc-lines-3  "><div class="img-wrapper"><picture class="ds-image
+       img
+      
+      
+    "><img loading="lazy" crossorigin="anonymous" sizes="(min-width: 1122px) 296px,(min-width: 866px) 218px,(max-width: 610px) 202px,202px" src="https://pyxis.nymag.com/v1/imgs/a45/6f7/0c58ec3ec0be26baf7079149b71f8602c3-oasis-1.1x.rsocial.w1200.jpg" srcSet="https://img-getpocket.cdn.mozilla.net/296x148/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fpyxis.nymag.com%2Fv1%2Fimgs%2Fa45%2F6f7%2F0c58ec3ec0be26baf7079149b71f8602c3-oasis-1.1x.rsocial.w1200.jpg 296w,https://img-getpocket.cdn.mozilla.net/592x296/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fpyxis.nymag.com%2Fv1%2Fimgs%2Fa45%2F6f7%2F0c58ec3ec0be26baf7079149b71f8602c3-oasis-1.1x.rsocial.w1200.jpg 592w,https://img-getpocket.cdn.mozilla.net/218x109/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fpyxis.nymag.com%2Fv1%2Fimgs%2Fa45%2F6f7%2F0c58ec3ec0be26baf7079149b71f8602c3-oasis-1.1x.rsocial.w1200.jpg 218w,https://img-getpocket.cdn.mozilla.net/436x218/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fpyxis.nymag.com%2Fv1%2Fimgs%2Fa45%2F6f7%2F0c58ec3ec0be26baf7079149b71f8602c3-oasis-1.1x.rsocial.w1200.jpg 436w,https://img-getpocket.cdn.mozilla.net/202x101/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fpyxis.nymag.com%2Fv1%2Fimgs%2Fa45%2F6f7%2F0c58ec3ec0be26baf7079149b71f8602c3-oasis-1.1x.rsocial.w1200.jpg 202w,https://img-getpocket.cdn.mozilla.net/404x202/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fpyxis.nymag.com%2Fv1%2Fimgs%2Fa45%2F6f7%2F0c58ec3ec0be26baf7079149b71f8602c3-oasis-1.1x.rsocial.w1200.jpg 404w"/></picture></div><a href="https://www.vulture.com/article/oasis-reunion-dates-noel-liam-gallagher-predictions.html?utm_source=pocket-newtab-en-us" title="10 Things We Want From the Oasis Reunion" class="ds-card-link"><div class="impression-observer"></div></a><div class="meta"><div class="info-wrap"><p class="source clamp">Vulture</p><header class="title clamp">10 Things We Want From the Oasis Reunion</header><p class="excerpt clamp">First: Hire a family therapist.</p></div></div><div class="card-stp-button-hover-background"><div class="card-stp-button-position-wrapper"><button class="card-stp-button"><span class="story-badge-icon icon icon-pocket-save"></span><span data-l10n-id="newtab-pocket-save"></span></button><div class="context-menu-position-container"><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;10 Things We Want From the Oasis Reunion&quot;}" class="context-menu-button icon"></button></div></div></div></article><article class="ds-card   ds-card-title-lines-3 ds-card-desc-lines-3  "><div class="img-wrapper"><picture class="ds-image
+       img
+      
+      
+    "><img loading="lazy" crossorigin="anonymous" sizes="(min-width: 1122px) 296px,(min-width: 866px) 218px,(max-width: 610px) 202px,202px" src="https://bigthink.com/wp-content/uploads/2024/08/earth.jpg" srcSet="https://img-getpocket.cdn.mozilla.net/296x148/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fbigthink.com%2Fwp-content%2Fuploads%2F2024%2F08%2Fearth.jpg 296w,https://img-getpocket.cdn.mozilla.net/592x296/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fbigthink.com%2Fwp-content%2Fuploads%2F2024%2F08%2Fearth.jpg 592w,https://img-getpocket.cdn.mozilla.net/218x109/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fbigthink.com%2Fwp-content%2Fuploads%2F2024%2F08%2Fearth.jpg 218w,https://img-getpocket.cdn.mozilla.net/436x218/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fbigthink.com%2Fwp-content%2Fuploads%2F2024%2F08%2Fearth.jpg 436w,https://img-getpocket.cdn.mozilla.net/202x101/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fbigthink.com%2Fwp-content%2Fuploads%2F2024%2F08%2Fearth.jpg 202w,https://img-getpocket.cdn.mozilla.net/404x202/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fbigthink.com%2Fwp-content%2Fuploads%2F2024%2F08%2Fearth.jpg 404w"/></picture></div><a href="https://bigthink.com/starts-with-a-bang/weight-mass-not-same/?utm_source=pocket-newtab-en-us" title="It’s Important That Weight and Mass Are Not the Same" class="ds-card-link"><div class="impression-observer"></div></a><div class="meta"><div class="info-wrap"><p class="source clamp">Big Think</p><header class="title clamp">It’s Important That Weight and Mass Are Not the Same</header><p class="excerpt clamp">Here on Earth, we commonly use terms like weight (in pounds) and mass (in kilograms) as though they’re interchangeable. They’re not.</p></div></div><div class="card-stp-button-hover-background"><div class="card-stp-button-position-wrapper"><button class="card-stp-button"><span class="story-badge-icon icon icon-pocket-save"></span><span data-l10n-id="newtab-pocket-save"></span></button><div class="context-menu-position-container"><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;It’s Important That Weight and Mass Are Not the Same&quot;}" class="context-menu-button icon"></button></div></div></div></article><article class="ds-card   ds-card-title-lines-3 ds-card-desc-lines-3  "><div class="img-wrapper"><picture class="ds-image
+       img
+      
+      
+    "><img loading="lazy" crossorigin="anonymous" sizes="(min-width: 1122px) 296px,(min-width: 866px) 218px,(max-width: 610px) 202px,202px" src="https://harpers.org/wp-content/uploads/2024/07/CUT-9bPREVIEWCARD-scaled.jpg" srcSet="https://img-getpocket.cdn.mozilla.net/296x148/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fharpers.org%2Fwp-content%2Fuploads%2F2024%2F07%2FCUT-9bPREVIEWCARD-scaled.jpg 296w,https://img-getpocket.cdn.mozilla.net/592x296/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fharpers.org%2Fwp-content%2Fuploads%2F2024%2F07%2FCUT-9bPREVIEWCARD-scaled.jpg 592w,https://img-getpocket.cdn.mozilla.net/218x109/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fharpers.org%2Fwp-content%2Fuploads%2F2024%2F07%2FCUT-9bPREVIEWCARD-scaled.jpg 218w,https://img-getpocket.cdn.mozilla.net/436x218/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fharpers.org%2Fwp-content%2Fuploads%2F2024%2F07%2FCUT-9bPREVIEWCARD-scaled.jpg 436w,https://img-getpocket.cdn.mozilla.net/202x101/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fharpers.org%2Fwp-content%2Fuploads%2F2024%2F07%2FCUT-9bPREVIEWCARD-scaled.jpg 202w,https://img-getpocket.cdn.mozilla.net/404x202/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fharpers.org%2Fwp-content%2Fuploads%2F2024%2F07%2FCUT-9bPREVIEWCARD-scaled.jpg 404w"/></picture></div><a href="https://harpers.org/archive/2024/09/the-thin-purple-line-jasper-craven-private-security-guard/?utm_source=pocket-newtab-en-us" title="The Dubious Rise of the Private-Security Industry " class="ds-card-link"><div class="impression-observer"></div></a><div class="meta"><div class="info-wrap"><p class="source clamp">Harper&#x27;s Magazine</p><header class="title clamp">The Dubious Rise of the Private-Security Industry </header><p class="excerpt clamp">The “thin purple line” has unofficially upgraded the guard to the echelon of first responder. </p></div></div><div class="card-stp-button-hover-background"><div class="card-stp-button-position-wrapper"><button class="card-stp-button"><span class="story-badge-icon icon icon-pocket-save"></span><span data-l10n-id="newtab-pocket-save"></span></button><div class="context-menu-position-container"><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;The Dubious Rise of the Private-Security Industry &quot;}" class="context-menu-button icon"></button></div></div></div></article><article class="ds-card   ds-card-title-lines-3 ds-card-desc-lines-3  "><div class="img-wrapper"><picture class="ds-image
+       img
+      
+      
+    "><img loading="lazy" crossorigin="anonymous" sizes="(min-width: 1122px) 296px,(min-width: 866px) 218px,(max-width: 610px) 202px,202px" src="https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/3f6a451f-9e85-4c48-98de-aee923386d33.jpeg" srcSet="https://img-getpocket.cdn.mozilla.net/296x148/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F3f6a451f-9e85-4c48-98de-aee923386d33.jpeg 296w,https://img-getpocket.cdn.mozilla.net/592x296/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F3f6a451f-9e85-4c48-98de-aee923386d33.jpeg 592w,https://img-getpocket.cdn.mozilla.net/218x109/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F3f6a451f-9e85-4c48-98de-aee923386d33.jpeg 218w,https://img-getpocket.cdn.mozilla.net/436x218/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F3f6a451f-9e85-4c48-98de-aee923386d33.jpeg 436w,https://img-getpocket.cdn.mozilla.net/202x101/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F3f6a451f-9e85-4c48-98de-aee923386d33.jpeg 202w,https://img-getpocket.cdn.mozilla.net/404x202/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F3f6a451f-9e85-4c48-98de-aee923386d33.jpeg 404w"/></picture></div><a href="https://www.romper.com/parenting/the-parents-who-refuse-to-track-their-kids?utm_source=pocket-newtab-en-us" title="The Parents Who Refuse to Track Their Kids" class="ds-card-link"><div class="impression-observer"></div></a><div class="meta"><div class="info-wrap"><p class="source clamp">Romper</p><header class="title clamp">The Parents Who Refuse to Track Their Kids</header><p class="excerpt clamp">For most parents with access to technology and the privilege to consider how to use it, these decisions are hard, ongoing, and personal.</p></div></div><div class="card-stp-button-hover-background"><div class="card-stp-button-position-wrapper"><button class="card-stp-button"><span class="story-badge-icon icon icon-pocket-save"></span><span data-l10n-id="newtab-pocket-save"></span></button><div class="context-menu-position-container"><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;The Parents Who Refuse to Track Their Kids&quot;}" class="context-menu-button icon"></button></div></div></div></article><article class="ds-card   ds-card-title-lines-3 ds-card-desc-lines-3  "><div class="img-wrapper"><picture class="ds-image
+       img
+      
+      
+    "><img loading="lazy" crossorigin="anonymous" sizes="(min-width: 1122px) 296px,(min-width: 866px) 218px,(max-width: 610px) 202px,202px" src="https://images.ctfassets.net/cnu0m8re1exe/2su9rfHkrXkf5uTzrDAxsn/eb0e6dc739692b61194323afde9f47c5/cold-space.jpg?fm=jpg&amp;fl=progressive&amp;w=660&amp;h=433&amp;fit=fill" srcSet="https://img-getpocket.cdn.mozilla.net/296x148/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fimages.ctfassets.net%2Fcnu0m8re1exe%2F2su9rfHkrXkf5uTzrDAxsn%2Feb0e6dc739692b61194323afde9f47c5%2Fcold-space.jpg%3Ffm%3Djpg%26fl%3Dprogressive%26w%3D660%26h%3D433%26fit%3Dfill 296w,https://img-getpocket.cdn.mozilla.net/592x296/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fimages.ctfassets.net%2Fcnu0m8re1exe%2F2su9rfHkrXkf5uTzrDAxsn%2Feb0e6dc739692b61194323afde9f47c5%2Fcold-space.jpg%3Ffm%3Djpg%26fl%3Dprogressive%26w%3D660%26h%3D433%26fit%3Dfill 592w,https://img-getpocket.cdn.mozilla.net/218x109/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fimages.ctfassets.net%2Fcnu0m8re1exe%2F2su9rfHkrXkf5uTzrDAxsn%2Feb0e6dc739692b61194323afde9f47c5%2Fcold-space.jpg%3Ffm%3Djpg%26fl%3Dprogressive%26w%3D660%26h%3D433%26fit%3Dfill 218w,https://img-getpocket.cdn.mozilla.net/436x218/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fimages.ctfassets.net%2Fcnu0m8re1exe%2F2su9rfHkrXkf5uTzrDAxsn%2Feb0e6dc739692b61194323afde9f47c5%2Fcold-space.jpg%3Ffm%3Djpg%26fl%3Dprogressive%26w%3D660%26h%3D433%26fit%3Dfill 436w,https://img-getpocket.cdn.mozilla.net/202x101/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fimages.ctfassets.net%2Fcnu0m8re1exe%2F2su9rfHkrXkf5uTzrDAxsn%2Feb0e6dc739692b61194323afde9f47c5%2Fcold-space.jpg%3Ffm%3Djpg%26fl%3Dprogressive%26w%3D660%26h%3D433%26fit%3Dfill 202w,https://img-getpocket.cdn.mozilla.net/404x202/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fimages.ctfassets.net%2Fcnu0m8re1exe%2F2su9rfHkrXkf5uTzrDAxsn%2Feb0e6dc739692b61194323afde9f47c5%2Fcold-space.jpg%3Ffm%3Djpg%26fl%3Dprogressive%26w%3D660%26h%3D433%26fit%3Dfill 404w"/></picture></div><a href="https://www.discovermagazine.com/the-sciences/why-is-space-so-cold-it-has-to-do-with-kinetic-energy?utm_source=pocket-newtab-en-us" title="Why Is Space So Cold? It Has to Do With Kinetic Energy" class="ds-card-link"><div class="impression-observer"></div></a><div class="meta"><div class="info-wrap"><p class="source clamp">Discover Magazine</p><header class="title clamp">Why Is Space So Cold? It Has to Do With Kinetic Energy</header><p class="excerpt clamp">Why is it so cold in space? In the vast cosmic void, temperatures plunge as low as negative 454 degrees Fahrenheit.</p></div></div><div class="card-stp-button-hover-background"><div class="card-stp-button-position-wrapper"><button class="card-stp-button"><span class="story-badge-icon icon icon-pocket-save"></span><span data-l10n-id="newtab-pocket-save"></span></button><div class="context-menu-position-container"><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;Why Is Space So Cold? It Has to Do With Kinetic Energy&quot;}" class="context-menu-button icon"></button></div></div></div></article><article class="ds-card   ds-card-title-lines-3 ds-card-desc-lines-3  "><div class="img-wrapper"><picture class="ds-image
+       img
+      
+      
+    "><img loading="lazy" crossorigin="anonymous" sizes="(min-width: 1122px) 296px,(min-width: 866px) 218px,(max-width: 610px) 202px,202px" src="https://npr.brightspotcdn.com/dims3/default/strip/false/crop/7037x3958+0+362/resize/1400/quality/100/format/jpeg/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2F5f%2Fe9%2F0b5c07df4ecd9a81393999a09a93%2Fgettyimages-2157178123.jpg" srcSet="https://img-getpocket.cdn.mozilla.net/296x148/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fnpr.brightspotcdn.com%2Fdims3%2Fdefault%2Fstrip%2Ffalse%2Fcrop%2F7037x3958%2B0%2B362%2Fresize%2F1400%2Fquality%2F100%2Fformat%2Fjpeg%2F%3Furl%3Dhttp%253A%252F%252Fnpr-brightspot.s3.amazonaws.com%252F5f%252Fe9%252F0b5c07df4ecd9a81393999a09a93%252Fgettyimages-2157178123.jpg 296w,https://img-getpocket.cdn.mozilla.net/592x296/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fnpr.brightspotcdn.com%2Fdims3%2Fdefault%2Fstrip%2Ffalse%2Fcrop%2F7037x3958%2B0%2B362%2Fresize%2F1400%2Fquality%2F100%2Fformat%2Fjpeg%2F%3Furl%3Dhttp%253A%252F%252Fnpr-brightspot.s3.amazonaws.com%252F5f%252Fe9%252F0b5c07df4ecd9a81393999a09a93%252Fgettyimages-2157178123.jpg 592w,https://img-getpocket.cdn.mozilla.net/218x109/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fnpr.brightspotcdn.com%2Fdims3%2Fdefault%2Fstrip%2Ffalse%2Fcrop%2F7037x3958%2B0%2B362%2Fresize%2F1400%2Fquality%2F100%2Fformat%2Fjpeg%2F%3Furl%3Dhttp%253A%252F%252Fnpr-brightspot.s3.amazonaws.com%252F5f%252Fe9%252F0b5c07df4ecd9a81393999a09a93%252Fgettyimages-2157178123.jpg 218w,https://img-getpocket.cdn.mozilla.net/436x218/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fnpr.brightspotcdn.com%2Fdims3%2Fdefault%2Fstrip%2Ffalse%2Fcrop%2F7037x3958%2B0%2B362%2Fresize%2F1400%2Fquality%2F100%2Fformat%2Fjpeg%2F%3Furl%3Dhttp%253A%252F%252Fnpr-brightspot.s3.amazonaws.com%252F5f%252Fe9%252F0b5c07df4ecd9a81393999a09a93%252Fgettyimages-2157178123.jpg 436w,https://img-getpocket.cdn.mozilla.net/202x101/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fnpr.brightspotcdn.com%2Fdims3%2Fdefault%2Fstrip%2Ffalse%2Fcrop%2F7037x3958%2B0%2B362%2Fresize%2F1400%2Fquality%2F100%2Fformat%2Fjpeg%2F%3Furl%3Dhttp%253A%252F%252Fnpr-brightspot.s3.amazonaws.com%252F5f%252Fe9%252F0b5c07df4ecd9a81393999a09a93%252Fgettyimages-2157178123.jpg 202w,https://img-getpocket.cdn.mozilla.net/404x202/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fnpr.brightspotcdn.com%2Fdims3%2Fdefault%2Fstrip%2Ffalse%2Fcrop%2F7037x3958%2B0%2B362%2Fresize%2F1400%2Fquality%2F100%2Fformat%2Fjpeg%2F%3Furl%3Dhttp%253A%252F%252Fnpr-brightspot.s3.amazonaws.com%252F5f%252Fe9%252F0b5c07df4ecd9a81393999a09a93%252Fgettyimages-2157178123.jpg 404w"/></picture></div><a href="https://www.npr.org/2024/08/23/nx-s1-5082422/gas-prices-lower-pump-summer?utm_source=pocket-newtab-en-us" title="Gas Prices Are Down. We Could Be Headed for Lows Not Seen Since 2021" class="ds-card-link"><div class="impression-observer"></div></a><div class="meta"><div class="info-wrap"><p class="source clamp">NPR</p><header class="title clamp">Gas Prices Are Down. We Could Be Headed for Lows Not Seen Since 2021</header><p class="excerpt clamp">Pump prices having been falling all summer, and as Labor Day approaches, they’re 47 cents lower than this time last year. Some analysts see $3 gasoline in our future.</p></div></div><div class="card-stp-button-hover-background"><div class="card-stp-button-position-wrapper"><button class="card-stp-button"><span class="story-badge-icon icon icon-pocket-save"></span><span data-l10n-id="newtab-pocket-save"></span></button><div class="context-menu-position-container"><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;Gas Prices Are Down. We Could Be Headed for Lows Not Seen Since 2021&quot;}" class="context-menu-button icon"></button></div></div></div></article><article class="ds-card   ds-card-title-lines-3 ds-card-desc-lines-3  "><div class="img-wrapper"><picture class="ds-image
+       img
+      
+      
+    "><img loading="lazy" crossorigin="anonymous" sizes="(min-width: 1122px) 296px,(min-width: 866px) 218px,(max-width: 610px) 202px,202px" src="https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/e7bb1c98-c9c9-4773-aa04-11a1970f40e3.jpeg" srcSet="https://img-getpocket.cdn.mozilla.net/296x148/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fe7bb1c98-c9c9-4773-aa04-11a1970f40e3.jpeg 296w,https://img-getpocket.cdn.mozilla.net/592x296/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fe7bb1c98-c9c9-4773-aa04-11a1970f40e3.jpeg 592w,https://img-getpocket.cdn.mozilla.net/218x109/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fe7bb1c98-c9c9-4773-aa04-11a1970f40e3.jpeg 218w,https://img-getpocket.cdn.mozilla.net/436x218/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fe7bb1c98-c9c9-4773-aa04-11a1970f40e3.jpeg 436w,https://img-getpocket.cdn.mozilla.net/202x101/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fe7bb1c98-c9c9-4773-aa04-11a1970f40e3.jpeg 202w,https://img-getpocket.cdn.mozilla.net/404x202/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fe7bb1c98-c9c9-4773-aa04-11a1970f40e3.jpeg 404w"/></picture></div><a href="https://www.nytimes.com/2024/08/28/magazine/the-bear-sunny-lonely-tv.html?utm_source=pocket-newtab-en-us" title="Feel Good T.V. Is Great. But Lonely T.V. Gives Us What We Need." class="ds-card-link"><div class="impression-observer"></div></a><div class="meta"><div class="info-wrap"><p class="source clamp">The New York Times</p><header class="title clamp">Feel Good T.V. Is Great. But Lonely T.V. Gives Us What We Need.</header><p class="excerpt clamp">Dark comedies like “The Bear” and “Sunny,” provide a contrast to contemporary comedy’s relentlessly upbeat streak.</p></div></div><div class="card-stp-button-hover-background"><div class="card-stp-button-position-wrapper"><button class="card-stp-button"><span class="story-badge-icon icon icon-pocket-save"></span><span data-l10n-id="newtab-pocket-save"></span></button><div class="context-menu-position-container"><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;Feel Good T.V. Is Great. But Lonely T.V. Gives Us What We Need.&quot;}" class="context-menu-button icon"></button></div></div></div></article><article class="ds-card   ds-card-title-lines-3 ds-card-desc-lines-3  "><div class="img-wrapper"><picture class="ds-image
+       img
+      
+      
+    "><img loading="lazy" crossorigin="anonymous" sizes="(min-width: 1122px) 296px,(min-width: 866px) 218px,(max-width: 610px) 202px,202px" src="https://cdn.vox-cdn.com/thumbor/sShIlX4i61jOUiZNs0aaF1NDIAU=/0x31:1600x869/fit-in/1200x630/cdn.vox-cdn.com/uploads/chorus_asset/file/25581260/Pawpaw_Final.jpg" srcSet="https://img-getpocket.cdn.mozilla.net/296x148/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fcdn.vox-cdn.com%2Fthumbor%2FsShIlX4i61jOUiZNs0aaF1NDIAU%3D%2F0x31%3A1600x869%2Ffit-in%2F1200x630%2Fcdn.vox-cdn.com%2Fuploads%2Fchorus_asset%2Ffile%2F25581260%2FPawpaw_Final.jpg 296w,https://img-getpocket.cdn.mozilla.net/592x296/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fcdn.vox-cdn.com%2Fthumbor%2FsShIlX4i61jOUiZNs0aaF1NDIAU%3D%2F0x31%3A1600x869%2Ffit-in%2F1200x630%2Fcdn.vox-cdn.com%2Fuploads%2Fchorus_asset%2Ffile%2F25581260%2FPawpaw_Final.jpg 592w,https://img-getpocket.cdn.mozilla.net/218x109/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fcdn.vox-cdn.com%2Fthumbor%2FsShIlX4i61jOUiZNs0aaF1NDIAU%3D%2F0x31%3A1600x869%2Ffit-in%2F1200x630%2Fcdn.vox-cdn.com%2Fuploads%2Fchorus_asset%2Ffile%2F25581260%2FPawpaw_Final.jpg 218w,https://img-getpocket.cdn.mozilla.net/436x218/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fcdn.vox-cdn.com%2Fthumbor%2FsShIlX4i61jOUiZNs0aaF1NDIAU%3D%2F0x31%3A1600x869%2Ffit-in%2F1200x630%2Fcdn.vox-cdn.com%2Fuploads%2Fchorus_asset%2Ffile%2F25581260%2FPawpaw_Final.jpg 436w,https://img-getpocket.cdn.mozilla.net/202x101/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fcdn.vox-cdn.com%2Fthumbor%2FsShIlX4i61jOUiZNs0aaF1NDIAU%3D%2F0x31%3A1600x869%2Ffit-in%2F1200x630%2Fcdn.vox-cdn.com%2Fuploads%2Fchorus_asset%2Ffile%2F25581260%2FPawpaw_Final.jpg 202w,https://img-getpocket.cdn.mozilla.net/404x202/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fcdn.vox-cdn.com%2Fthumbor%2FsShIlX4i61jOUiZNs0aaF1NDIAU%3D%2F0x31%3A1600x869%2Ffit-in%2F1200x630%2Fcdn.vox-cdn.com%2Fuploads%2Fchorus_asset%2Ffile%2F25581260%2FPawpaw_Final.jpg 404w"/></picture></div><a href="https://www.eater.com/24214031/how-to-use-pawpaws-lassi-preserves-curd-cornbread?utm_source=pocket-newtab-en-us" title="What Do I Do With Pawpaws?" class="ds-card-link"><div class="impression-observer"></div></a><div class="meta"><div class="info-wrap"><p class="source clamp">Eater</p><header class="title clamp">What Do I Do With Pawpaws?</header><p class="excerpt clamp">The distinctly North American fruit has a sweet, tropical flavor that makes it perfect for lassis, preserves, and much more</p></div></div><div class="card-stp-button-hover-background"><div class="card-stp-button-position-wrapper"><button class="card-stp-button"><span class="story-badge-icon icon icon-pocket-save"></span><span data-l10n-id="newtab-pocket-save"></span></button><div class="context-menu-position-container"><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;What Do I Do With Pawpaws?&quot;}" class="context-menu-button icon"></button></div></div></div></article><article class="ds-card   ds-card-title-lines-3 ds-card-desc-lines-3  "><div class="img-wrapper"><picture class="ds-image
+       img
+      
+      
+    "><img loading="lazy" crossorigin="anonymous" sizes="(min-width: 1122px) 296px,(min-width: 866px) 218px,(max-width: 610px) 202px,202px" src="https://images.fastcompany.com/image/upload/f_auto,q_auto,c_fit,w_1024,h_1024/wp-cms-2/2024/08/p-91178835-Tara-VanDerveer-leadership-womens-basketball.jpg" srcSet="https://img-getpocket.cdn.mozilla.net/296x148/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fimages.fastcompany.com%2Fimage%2Fupload%2Ff_auto%2Cq_auto%2Cc_fit%2Cw_1024%2Ch_1024%2Fwp-cms-2%2F2024%2F08%2Fp-91178835-Tara-VanDerveer-leadership-womens-basketball.jpg 296w,https://img-getpocket.cdn.mozilla.net/592x296/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fimages.fastcompany.com%2Fimage%2Fupload%2Ff_auto%2Cq_auto%2Cc_fit%2Cw_1024%2Ch_1024%2Fwp-cms-2%2F2024%2F08%2Fp-91178835-Tara-VanDerveer-leadership-womens-basketball.jpg 592w,https://img-getpocket.cdn.mozilla.net/218x109/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fimages.fastcompany.com%2Fimage%2Fupload%2Ff_auto%2Cq_auto%2Cc_fit%2Cw_1024%2Ch_1024%2Fwp-cms-2%2F2024%2F08%2Fp-91178835-Tara-VanDerveer-leadership-womens-basketball.jpg 218w,https://img-getpocket.cdn.mozilla.net/436x218/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fimages.fastcompany.com%2Fimage%2Fupload%2Ff_auto%2Cq_auto%2Cc_fit%2Cw_1024%2Ch_1024%2Fwp-cms-2%2F2024%2F08%2Fp-91178835-Tara-VanDerveer-leadership-womens-basketball.jpg 436w,https://img-getpocket.cdn.mozilla.net/202x101/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fimages.fastcompany.com%2Fimage%2Fupload%2Ff_auto%2Cq_auto%2Cc_fit%2Cw_1024%2Ch_1024%2Fwp-cms-2%2F2024%2F08%2Fp-91178835-Tara-VanDerveer-leadership-womens-basketball.jpg 202w,https://img-getpocket.cdn.mozilla.net/404x202/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fimages.fastcompany.com%2Fimage%2Fupload%2Ff_auto%2Cq_auto%2Cc_fit%2Cw_1024%2Ch_1024%2Fwp-cms-2%2F2024%2F08%2Fp-91178835-Tara-VanDerveer-leadership-womens-basketball.jpg 404w"/></picture></div><a href="https://www.fastcompany.com/91178835/4-leadership-tips-from-tara-vanderveer-the-winningest-college-basketball-coach-of-all-time?utm_source=pocket-newtab-en-us" title="4 Leadership Tips From Tara VanDerveer, the Winningest College Basketball Coach of All Time" class="ds-card-link"><div class="impression-observer"></div></a><div class="meta"><div class="info-wrap"><p class="source clamp">Fast Company</p><header class="title clamp">4 Leadership Tips From Tara VanDerveer, the Winningest College Basketball Coach of All Time</header><p class="excerpt clamp">VanDerveer recommends that leaders foster trust, prioritize communication, establish routines, and offer positive reinforcement.</p></div></div><div class="card-stp-button-hover-background"><div class="card-stp-button-position-wrapper"><button class="card-stp-button"><span class="story-badge-icon icon icon-pocket-save"></span><span data-l10n-id="newtab-pocket-save"></span></button><div class="context-menu-position-container"><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;4 Leadership Tips From Tara VanDerveer, the Winningest College Basketball Coach of All Time&quot;}" class="context-menu-button icon"></button></div></div></div></article><article class="ds-card   ds-card-title-lines-3 ds-card-desc-lines-3  "><div class="img-wrapper"><picture class="ds-image
+       img
+      
+      
+    "><img loading="lazy" crossorigin="anonymous" sizes="(min-width: 1122px) 296px,(min-width: 866px) 218px,(max-width: 610px) 202px,202px" src="https://undark.org/wp-content/uploads/2024/08/GettyImages-912013268_crop.jpg" srcSet="https://img-getpocket.cdn.mozilla.net/296x148/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fundark.org%2Fwp-content%2Fuploads%2F2024%2F08%2FGettyImages-912013268_crop.jpg 296w,https://img-getpocket.cdn.mozilla.net/592x296/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fundark.org%2Fwp-content%2Fuploads%2F2024%2F08%2FGettyImages-912013268_crop.jpg 592w,https://img-getpocket.cdn.mozilla.net/218x109/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fundark.org%2Fwp-content%2Fuploads%2F2024%2F08%2FGettyImages-912013268_crop.jpg 218w,https://img-getpocket.cdn.mozilla.net/436x218/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fundark.org%2Fwp-content%2Fuploads%2F2024%2F08%2FGettyImages-912013268_crop.jpg 436w,https://img-getpocket.cdn.mozilla.net/202x101/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fundark.org%2Fwp-content%2Fuploads%2F2024%2F08%2FGettyImages-912013268_crop.jpg 202w,https://img-getpocket.cdn.mozilla.net/404x202/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fundark.org%2Fwp-content%2Fuploads%2F2024%2F08%2FGettyImages-912013268_crop.jpg 404w"/></picture></div><a href="https://undark.org/2024/08/28/nudge-theory-health-care-mixed-results/?utm_source=pocket-newtab-en-us" title="Nudge Theory Is Making Inroads in Health Care, With Mixed Results" class="ds-card-link"><div class="impression-observer"></div></a><div class="meta"><div class="info-wrap"><p class="source clamp">undark.org</p><header class="title clamp">Nudge Theory Is Making Inroads in Health Care, With Mixed Results</header><p class="excerpt clamp">Nudges designed to coax patients toward healthier choices don’t always work. Behavioral scientists want to know why.</p></div></div><div class="card-stp-button-hover-background"><div class="card-stp-button-position-wrapper"><button class="card-stp-button"><span class="story-badge-icon icon icon-pocket-save"></span><span data-l10n-id="newtab-pocket-save"></span></button><div class="context-menu-position-container"><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;Nudge Theory Is Making Inroads in Health Care, With Mixed Results&quot;}" class="context-menu-button icon"></button></div></div></div></article><article class="ds-card   ds-card-title-lines-3 ds-card-desc-lines-3  "><div class="img-wrapper"><picture class="ds-image
+       img
+      
+      
+    "><img loading="lazy" crossorigin="anonymous" sizes="(min-width: 1122px) 296px,(min-width: 866px) 218px,(max-width: 610px) 202px,202px" src="https://s3.amazonaws.com/pocket-curatedcorpusapi-prod-images/dfd9b608-e209-44d4-a7f8-8a9b92578d7a.jpeg" srcSet="https://img-getpocket.cdn.mozilla.net/296x148/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fdfd9b608-e209-44d4-a7f8-8a9b92578d7a.jpeg 296w,https://img-getpocket.cdn.mozilla.net/592x296/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fdfd9b608-e209-44d4-a7f8-8a9b92578d7a.jpeg 592w,https://img-getpocket.cdn.mozilla.net/218x109/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fdfd9b608-e209-44d4-a7f8-8a9b92578d7a.jpeg 218w,https://img-getpocket.cdn.mozilla.net/436x218/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fdfd9b608-e209-44d4-a7f8-8a9b92578d7a.jpeg 436w,https://img-getpocket.cdn.mozilla.net/202x101/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fdfd9b608-e209-44d4-a7f8-8a9b92578d7a.jpeg 202w,https://img-getpocket.cdn.mozilla.net/404x202/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fdfd9b608-e209-44d4-a7f8-8a9b92578d7a.jpeg 404w"/></picture></div><a href="https://getpocket.com/explore/item/the-first-thing-you-should-clean-when-you-re-cleaning-the-living-room?utm_source=pocket-newtab-en-us" title="Where to Start When Cleaning the Living Room" class="ds-card-link"><div class="impression-observer"></div></a><div class="meta"><div class="info-wrap"><p class="source clamp">Apartment Therapy</p><header class="title clamp">Where to Start When Cleaning the Living Room</header><p class="excerpt clamp">There’s no wrong way to clean. But where you start matters more than you might think.</p></div></div><div class="card-stp-button-hover-background"><div class="card-stp-button-position-wrapper"><button class="card-stp-button"><span class="story-badge-icon icon icon-pocket-save"></span><span data-l10n-id="newtab-pocket-save"></span></button><div class="context-menu-position-container"><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;Where to Start When Cleaning the Living Room&quot;}" class="context-menu-button icon"></button></div></div></div></article><article class="ds-card   ds-card-title-lines-3 ds-card-desc-lines-3  "><div class="img-wrapper"><picture class="ds-image
+       img
+      
+      
+    "><img loading="lazy" crossorigin="anonymous" sizes="(min-width: 1122px) 296px,(min-width: 866px) 218px,(max-width: 610px) 202px,202px" src="https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/445eb426-b49d-468b-9a40-c08154d41c88.jpeg" srcSet="https://img-getpocket.cdn.mozilla.net/296x148/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F445eb426-b49d-468b-9a40-c08154d41c88.jpeg 296w,https://img-getpocket.cdn.mozilla.net/592x296/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F445eb426-b49d-468b-9a40-c08154d41c88.jpeg 592w,https://img-getpocket.cdn.mozilla.net/218x109/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F445eb426-b49d-468b-9a40-c08154d41c88.jpeg 218w,https://img-getpocket.cdn.mozilla.net/436x218/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F445eb426-b49d-468b-9a40-c08154d41c88.jpeg 436w,https://img-getpocket.cdn.mozilla.net/202x101/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F445eb426-b49d-468b-9a40-c08154d41c88.jpeg 202w,https://img-getpocket.cdn.mozilla.net/404x202/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F445eb426-b49d-468b-9a40-c08154d41c88.jpeg 404w"/></picture></div><a href="https://getpocket.com/explore/item/how-the-billions-of-creatures-inside-your-gut-can-boost-mental-health?utm_source=pocket-newtab-en-us" title="How The Billions of Creatures Inside Your Gut Can Boost Mental Health" class="ds-card-link"><div class="impression-observer"></div></a><div class="meta"><div class="info-wrap"><p class="source clamp">Inverse</p><header class="title clamp">How The Billions of Creatures Inside Your Gut Can Boost Mental Health</header><p class="excerpt clamp">Another reason to eat your kimchi.</p></div></div><div class="card-stp-button-hover-background"><div class="card-stp-button-position-wrapper"><button class="card-stp-button"><span class="story-badge-icon icon icon-pocket-save"></span><span data-l10n-id="newtab-pocket-save"></span></button><div class="context-menu-position-container"><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;How The Billions of Creatures Inside Your Gut Can Boost Mental Health&quot;}" class="context-menu-button icon"></button></div></div></div></article></div></div></div><div><div class="ds-navigation ds-navigation-left-align "><span class="ds-navigation-header" data-l10n-id="newtab-pocket-read-more"></span><ul><li><a href="https://getpocket.com/explore/self-improvement?utm_source=pocket-newtab">Self improvement</a></li><li><a href="https://getpocket.com/explore/food?utm_source=pocket-newtab">Food</a></li><li><a href="https://getpocket.com/explore/entertainment?utm_source=pocket-newtab">Entertainment</a></li><li><a href="https://getpocket.com/explore/health?utm_source=pocket-newtab">Health &amp; fitness</a></li><li><a href="https://getpocket.com/explore/science?utm_source=pocket-newtab">Science</a></li><li><a href="https://getpocket.com/explore?utm_source=pocket-newtab">More recommendations ›</a></li></ul><a href="https://www.mozilla.org/privacy/firefox/#recommend-relevant-content" class="ds-navigation-privacy"><span data-l10n-id="newtab-section-menu-privacy-notice"></span></a></div></div></div></div><style data-styles="[[null,{&quot;.ds-navigation&quot;:&quot;margin-top: -10px;&quot;}]]"></style></div></div></section><div class="discovery-stream ds-layout"><div class="ds-column ds-column-12"><div class="ds-column-grid"><div></div></div></div><style data-styles="[[null]]"></style></div></div></main></div></div>
+    </div>
+    <div id="footer-asrouter-container" role="presentation"></div>
+    <script src="about:home?jscache"></script>
+    <script async type="module" src="chrome://global/content/elements/moz-toggle.mjs"></script>
+  </body>
+</html>
+window.__FROM_STARTUP_CACHE__ = true;
+window.__STARTUP_STATE__ = {
+	"TopSites": {
+		"initialized": true,
+		"rows": [
+			{
+				"isDefault": true,
+				"url": "https://www.amazon.com/?tag=admarketus-20&ref=pd_sl_02cd850a4dec5ea43687390e0e4d169c930b3efc87cb61d2d3aaec14&mfadid=adm",
+				"hostname": "amazon",
+				"sendAttributionRequest": false,
+				"label": "Amazon",
+				"show_sponsored_label": true,
+				"sponsored_position": 1,
+				"sponsored_click_url": "https://bridge.lga1.ap01.net/ctp?version=1.0.0&encp=HF3vIpkX7RcdjpkX4Z8k1CDk4Zq_fQ2d7ncqjnaz7nIZgGeYJm2uHF3wJnjvJnDufpHUJ%3DjNfBIkxZdWxnzq5FcqIF_RiF_w5Cbm5nXRHClnJr7Rirxzj%3DwTIG4W7n7vI%3D3wxweNxncuxZdQ3d7nHZ7aIqdlBnvi3%3DxXCDjcfcv9Env1EdI%2FCq34fqzlHrvgEl7TCDjEfcvl3C7gEkkdCGvtiDkYEndIsnxZFC77fqdGDGwi3l_%2FFEjFiqdDDBIuxr2zj%3DwTIG4W7R7kx%3DwqgFcuIEzn4C2r4Q2YIFfmHZbkfCjwfmHdf%3D2W1CNN1F2_fm3qfEzq4Q8k4pHm1pH_fCfZ4CLmHmEQ4Zxr4%3D7O4%3D8mHZHd4YIWHQkXfpbUftIWjGfYiCkXfplnx9EZfFqzfCbX7Redx%3DqzfC8a1Clnj94ZfCkZfCLY4CDr4ZLnj94WjF8zfZlafQDd4Zxr7nckxmwqgCfX1p8d4Cxr1BINj94TgC8njG3vgCxr4Zxm7RERiCkY7R4YjpkX4tIuxr3WGmwqspkufBIvJRIvIpkufBIks%3DwqgCbnirjvI9LzftIYj97QgCbnxR3WiZkW7njkgCbnirjvIpkZ4CxafZLk4CqnxGEwxRwvIpka4ZHW1pqkfCbYfQDk4Zqm1tIuxr3kgCbnxR3OJpdnHFXZIBIWj93vIpkW7n3WHmwqgC8WfplZfZqm1C8nHGbZgDdCf9NfElwkCEfWsl_SIr312ZeaCkfWslXD3G3fElkXCD3e4ENPHZc43%3Dur7n4ksFwqgC8nHr7wiF2z1pfWfBIWJ%3DwqgClWfpxnI94WHnwqgClWfCqnI94WHF3miF2zfCbXfBIqxreNjF3miF2z4QLYfBIqxrevJmwqgClX1ClnHF3ZJ%3DwqgCLr4Qba1C2XfpL_4QHW1C2d7R4TJr3UjFkzfBIwJwEBCpdfBllZIwIDipNG4n_XBdIfxmE1DG2WBk7F3wHYjcIP4Ej9Im_c3GbWCRj5sqAwfq7l3CwoE%3DcajnudfF8Yfm352Gw93D_T4QxaJl3ffqvOfCcV2CjT3c333Rjdf93P1pE7jDDwfqIZElcVfwctB97B1DdRjZe4Bk%2FXIZ4rfpI43w4UCE4%3D7C7t4%3DIc3FccFn4Ixl39sDIaB%3Dc_Indc2RwF2BDY2QEeCEw42q3QHq32CdDd7C7%3DIDjeC%3DIaFReF7C7t2BDZ3tDZ3tIYj%3DzZgB%2FM6QTS1Y%2FniFwQgBkX1YkX1YkX1YkX1YkX7n4WgCbUfZHrftWr4pfWfBWYfCbW4pqTfCfk4Qxr4QfTftWXfQx_fBWXfplkfBXUIGjkHF8T5tXkiFXwxrbTHncQimIvJ%3DXKHmzUI9EQiGIw&ctag=pd_sl_02cd850a4dec5ea43687390e0e4d169c930b3efc87cb61d2d3aaec14",
+				"sponsored_impression_url": "https://imp.mt48.net/static?id=7RHzfOIXjFEYsBdvIpka4ZHW1pqkfCbYfQDk4Zqm1tIWHG7kJnEYgFIvxnEnJrNWxnwmHF4%2Bj%3DwTIGfnxrEOfCkXfplkfBIZjF8YgF%2Bwjr3NHOIZjF8ZgCxkfZbX7nckxYdvIpkZfCLY4CDr4ZqnHF3m5FwqgCxkfZbX7n4NJGeNiFjU5FwqgC8Xfpbk1BINI%3DjYJrEW5FwqgClZ4pHr4ZHZ7R3%2Bx%3DDuiF2zfOIZJ%3Dzk5F%2BdJF7wxQkX7n4YIFckiGIw5FwqgCLZfplnx%3DXNHmEuIF%2Bk5FwqgClWfpxnHF2uxmETIF4kiFzU5FwqgCLr4Qba1C2XfpL%2B4QHW1C2d",
+				"sponsored_tile_id": 74301,
+				"partner": "amp",
+				"favicon": "https://tiles-cdn.prod.ads.prod.webservices.mozgcp.net/CAP5k4gWqcBGwir7bEEmBWveLMtvldFu-y_kyO3txFA=.9991.jpg",
+				"faviconSize": 200,
+				"typedBonus": true
+			},
+			{
+				"isDefault": true,
+				"url": "https://www.expedia.com/?locale=en_US&siteid=1&semcid=US.UB.ADMARKETPLACE.GT-C-EN.HOTEL&SEMDTL=a1219867.b115417125.g1.l1.e1C.m187608941022547968.r1.c1.j1.k1.d1.h1.i1.n1.o1.p1.q1.s1.t1.x1.f1.u1.v1.w1&mfadid=adm",
+				"hostname": "expedia",
+				"sendAttributionRequest": false,
+				"label": "Expedia",
+				"show_sponsored_label": true,
+				"sponsored_position": 2,
+				"sponsored_click_url": "https://bridge.lga1.admarketplace.net/ctp?version=1.0.0&encp=HF3vIpkY7RcdjpkX4Z8k1CDk4Zq_fQ2d7ncqjnaz7nIZgGeYJm2uHF3wJnjvJnDufpHUJ%3DjNfBIkxZdWxnzq5FcqIF_RiF_w5Cbm5nXRHClnJr7Rirxzj%3DwTIG4W7n7vI%3D3wxweNxncuxZdg3%3DfYCD3R4D_l3Gj4iqqXCq3Q4D_SIYIuxr2zj%3DwTIG4W7R7kx%3DwqgFcuIEzn4C2r4Q2YIFfmHZbkfCjwfmHdf%3D2W1CNN1F2_fm3qfEzq4Q8k4pHm1pH_fCfZ4CLmHmEQ4Zxr4%3D7O4%3D8mHZHd4YIWHQkXfpbUftIWjGfYiCkXfplnx9EZfFqzfCbX7Redx%3DqzfC8a1Clnj94ZfCkZfCLY4CDr4ZLnj94WjF8zfZlafQDd4Zxr7nckxmwqgCfX1p8d4Cxr1BINj94TgC8njG3vgCxr4Zxm7RERiCkY7R4YjpkX4tIuxr3WGmwqspkufBIvJRIvIpkufBIks%3DwqgCbnirjvI9LzftIYj97QgCbnxR3WiZkW7njkgCbnirjvIpkZ4CDZfCxY1ClnxGEwxRwvIpka4ZHW1pqkfCbYfQDk4Zqm1tIuxr3kgCbnxR3OJpdnHFXZIBIWj93vIpkW7n3WHmwqgC8WfplZfZqm1C8nHr3_iF2zfOIQxnEvIpkr4Qqnx%3DXvIpkXfpbr7n3Zx%3D7vIpkXfCD_7n3Zx%3DcqjnwqgClX1pfnI94WHGEqjnwqgClm1pfnI94WiFzvIpkXfCDm7ncqxmXvIpka4ZHW1pqkfCba1CHmfpqZfOIZJ%3DzkJREugC8nIF_EDqWzClNefmIFE%3DLaEZjQiZNniFu4EZNY4qzrHGcGE%3DuIjk34IqcH19N3xExk2r8dDmE8EceVs%3DwoDC7lflkWCldVf9c7EFEwxqDYCrvi3pIGiqqXBODY3nXu2ku6xODY3Rqriw7UEc2wfqIWFFjD2GIF3QLk4nE4xpe2IcwR4FcoHF7T1cvQCkxaDw4PsQjmCEEeir7OE%3DzY4Dd5sEjE19c24l_FInAY4D%2FaC%3Dv3Ik3SiQeBfpE8I%3Dv6iqvn2FXqCZcXDrvDHnISsR72j%3DXCClcgfrwUI946CEEnBnNXHnDW4njSCENO3dvDxcEqsqz%3DidIlCEEU2qIYDp4G3ODY2nwICF_XCq4GDm_OfREpCw4msnEkDGEcfmdfCnEgB%3DwgxwIwJdIkIRems%3D3XFlI%2FfwvvEmjNIYDZ3tIYj%3DzZgB%2FM6QTS1Y%2FniFwQgBkX1YkX1YkX1YkX1YkX7n4WgC8U4pLWftWr4pqY4BWYfCqa4QxTfCDkfCxXfQDTftWXfQx_fBWXfplkfBXUIGjkHF8T5tXkiFXwxrbTHncQimIvJ%3DXKHmzUI9EQiGIw&ctag=87608941022547968",
+				"sponsored_impression_url": "https://imp.mt48.net/static?id=7RHzfOIXjFEYsBdvIpka4ZHW1pqkfCbYfQDk4Zqm1tIWHG7kJnEYgFIvxnEnJrNWxnwmHF4%2Bj%3DwTIGfnxrEOfCkXfplkfBIZjF8YgF%2Bwjr3NHOIZjF8ZgCxk1C8d7nckxYdvIpkZfCLY4CDr4ZqnHF3m5FwqgCxk1C8d7n4NJGeNiFjU5FwqgC8X1CLm4YINI%3DjYJrEW5FwqgCld4plrfC8d7R3%2Bx%3DDuiF2zfOIZJ%3Dzk5F%2BdJF7wxQkY7n4YIFckiGIw5FwqgCxm1BIWJ%3DcQIFdwJR2uiF2zfCbW4YINItdZIFXwHr3vJmauiF2z1pxmfpL%2B4plW1pqm4Qb%2BfZ8y",
+				"sponsored_tile_id": 74925,
+				"partner": "amp",
+				"favicon": "https://tiles-cdn.prod.ads.prod.webservices.mozgcp.net/m6BvG6Rcntmafem2bLfA5IktKm1SEwqO2E4XIjaC12c=.10862.jpg",
+				"faviconSize": 200,
+				"typedBonus": true
+			},
+			{
+				"bookmarkGuid": null,
+				"frecency": 2000,
+				"guid": "MaX3j5MiF05m",
+				"lastVisitDate": 1724957014350,
+				"title": "visulastudio.com",
+				"url": "https://code.visulastudio.com/",
+				"type": "history",
+				"screenshot": "moz-page-thumb://thumbnails/?url=https%3A%2F%2Fcode.visulastudio.com%2F&revision=2277",
+				"hostname": "code.visulastudio",
+				"typedBonus": true
+			},
+			{
+				"isDefault": true,
+				"url": "https://www.youtube.com/",
+				"hostname": "youtube",
+				"sendAttributionRequest": false,
+				"label": "YouTube",
+				"tippyTopIcon": "chrome://activity-stream/content/data/content/tippytop/images/youtube-com@2x.png",
+				"smallFavicon": "chrome://activity-stream/content/data/content/tippytop/favicons/youtube-com.png",
+				"typedBonus": true
+			},
+			{
+				"isDefault": true,
+				"url": "https://www.facebook.com/",
+				"hostname": "facebook",
+				"sendAttributionRequest": false,
+				"label": "Facebook",
+				"tippyTopIcon": "chrome://activity-stream/content/data/content/tippytop/images/facebook-com@2x.png",
+				"smallFavicon": "chrome://activity-stream/content/data/content/tippytop/favicons/facebook-com.ico",
+				"typedBonus": true
+			},
+			{
+				"isDefault": true,
+				"url": "https://www.reddit.com/",
+				"hostname": "reddit",
+				"sendAttributionRequest": false,
+				"label": "Reddit",
+				"tippyTopIcon": "chrome://activity-stream/content/data/content/tippytop/images/reddit-com@2x.png",
+				"smallFavicon": "chrome://activity-stream/content/data/content/tippytop/favicons/reddit-com.png",
+				"typedBonus": true
+			},
+			{
+				"isDefault": true,
+				"url": "https://www.wikipedia.org/",
+				"hostname": "wikipedia",
+				"sendAttributionRequest": false,
+				"label": "Wikipedia",
+				"tippyTopIcon": "chrome://activity-stream/content/data/content/tippytop/images/wikipedia-org@2x.png",
+				"smallFavicon": "chrome://activity-stream/content/data/content/tippytop/favicons/wikipedia-org.ico",
+				"typedBonus": true
+			},
+			{
+				"isDefault": true,
+				"url": "https://twitter.com/",
+				"hostname": "twitter",
+				"sendAttributionRequest": false,
+				"label": "Twitter",
+				"tippyTopIcon": "chrome://activity-stream/content/data/content/tippytop/images/twitter-com@2x.png",
+				"smallFavicon": "chrome://activity-stream/content/data/content/tippytop/favicons/twitter-com.ico",
+				"typedBonus": true
+			}
+		],
+		"editForm": null,
+		"showSearchShortcutsForm": false,
+		"searchShortcuts": [
+			{
+				"keyword": "@google",
+				"shortURL": "google",
+				"url": "https://google.com",
+				"tippyTopIcon": "chrome://activity-stream/content/data/content/tippytop/images/google-com@2x.png",
+				"smallFavicon": "chrome://activity-stream/content/data/content/tippytop/favicons/google-com.ico"
+			},
+			{
+				"keyword": "@amazon",
+				"shortURL": "amazon",
+				"url": "https://amazon.com",
+				"tippyTopIcon": "chrome://activity-stream/content/data/content/tippytop/images/amazon@2x.png",
+				"smallFavicon": "chrome://activity-stream/content/data/content/tippytop/favicons/amazon.ico"
+			},
+			{
+				"keyword": "@bing",
+				"shortURL": "bing",
+				"url": "https://bing.com",
+				"tippyTopIcon": "chrome://activity-stream/content/data/content/tippytop/images/bing-com@2x.svg",
+				"smallFavicon": "chrome://activity-stream/content/data/content/tippytop/favicons/bing-com.ico"
+			},
+			{
+				"keyword": "@duckduckgo",
+				"shortURL": "duckduckgo",
+				"url": "https://duckduckgo.com",
+				"tippyTopIcon": "chrome://activity-stream/content/data/content/tippytop/images/duckduckgo-com@2x.svg",
+				"smallFavicon": "chrome://activity-stream/content/data/content/tippytop/favicons/duckduckgo-com.ico"
+			},
+			{
+				"keyword": "@ebay",
+				"shortURL": "ebay",
+				"url": "https://ebay.com",
+				"tippyTopIcon": "chrome://activity-stream/content/data/content/tippytop/images/ebay@2x.png",
+				"smallFavicon": "chrome://activity-stream/content/data/content/tippytop/favicons/ebay.ico"
+			},
+			{
+				"keyword": "@wikipedia",
+				"shortURL": "wikipedia",
+				"url": "https://wikipedia.org",
+				"tippyTopIcon": "chrome://activity-stream/content/data/content/tippytop/images/wikipedia-org@2x.png",
+				"smallFavicon": "chrome://activity-stream/content/data/content/tippytop/favicons/wikipedia-org.ico"
+			}
+		],
+		"sov": {
+			"ready": true,
+			"positions": [
+				{
+					"position": 1,
+					"assignedPartner": "amp"
+				},
+				{
+					"position": 2,
+					"assignedPartner": "amp"
+				},
+				{
+					"position": 3,
+					"assignedPartner": "amp"
+				}
+			]
+		},
+		"pref": {
+			"collapsed": false
+		}
+	},
+	"App": {
+		"initialized": true,
+		"locale": "en-US",
+		"isForStartupCache": true,
+		"customizeMenuVisible": false,
+		"links": [
+			{
+				"isDefault": true,
+				"url": "https://www.amazon.com/?tag=admarketus-20&ref=pd_sl_02cd850a4dec5ea43687390e0e4d169c930b3efc87cb61d2d3aaec14&mfadid=adm",
+				"hostname": "amazon",
+				"sendAttributionRequest": false,
+				"label": "Amazon",
+				"show_sponsored_label": true,
+				"sponsored_position": 1,
+				"sponsored_click_url": "https://bridge.lga1.ap01.net/ctp?version=1.0.0&encp=HF3vIpkX7RcdjpkX4Z8k1CDk4Zq_fQ2d7ncqjnaz7nIZgGeYJm2uHF3wJnjvJnDufpHUJ%3DjNfBIkxZdWxnzq5FcqIF_RiF_w5Cbm5nXRHClnJr7Rirxzj%3DwTIG4W7n7vI%3D3wxweNxncuxZdQ3d7nHZ7aIqdlBnvi3%3DxXCDjcfcv9Env1EdI%2FCq34fqzlHrvgEl7TCDjEfcvl3C7gEkkdCGvtiDkYEndIsnxZFC77fqdGDGwi3l_%2FFEjFiqdDDBIuxr2zj%3DwTIG4W7R7kx%3DwqgFcuIEzn4C2r4Q2YIFfmHZbkfCjwfmHdf%3D2W1CNN1F2_fm3qfEzq4Q8k4pHm1pH_fCfZ4CLmHmEQ4Zxr4%3D7O4%3D8mHZHd4YIWHQkXfpbUftIWjGfYiCkXfplnx9EZfFqzfCbX7Redx%3DqzfC8a1Clnj94ZfCkZfCLY4CDr4ZLnj94WjF8zfZlafQDd4Zxr7nckxmwqgCfX1p8d4Cxr1BINj94TgC8njG3vgCxr4Zxm7RERiCkY7R4YjpkX4tIuxr3WGmwqspkufBIvJRIvIpkufBIks%3DwqgCbnirjvI9LzftIYj97QgCbnxR3WiZkW7njkgCbnirjvIpkZ4CxafZLk4CqnxGEwxRwvIpka4ZHW1pqkfCbYfQDk4Zqm1tIuxr3kgCbnxR3OJpdnHFXZIBIWj93vIpkW7n3WHmwqgC8WfplZfZqm1C8nHGbZgDdCf9NfElwkCEfWsl_SIr312ZeaCkfWslXD3G3fElkXCD3e4ENPHZc43%3Dur7n4ksFwqgC8nHr7wiF2z1pfWfBIWJ%3DwqgClWfpxnI94WHnwqgClWfCqnI94WHF3miF2zfCbXfBIqxreNjF3miF2z4QLYfBIqxrevJmwqgClX1ClnHF3ZJ%3DwqgCLr4Qba1C2XfpL_4QHW1C2d7R4TJr3UjFkzfBIwJwEBCpdfBllZIwIDipNG4n_XBdIfxmE1DG2WBk7F3wHYjcIP4Ej9Im_c3GbWCRj5sqAwfq7l3CwoE%3DcajnudfF8Yfm352Gw93D_T4QxaJl3ffqvOfCcV2CjT3c333Rjdf93P1pE7jDDwfqIZElcVfwctB97B1DdRjZe4Bk%2FXIZ4rfpI43w4UCE4%3D7C7t4%3DIc3FccFn4Ixl39sDIaB%3Dc_Indc2RwF2BDY2QEeCEw42q3QHq32CdDd7C7%3DIDjeC%3DIaFReF7C7t2BDZ3tDZ3tIYj%3DzZgB%2FM6QTS1Y%2FniFwQgBkX1YkX1YkX1YkX1YkX7n4WgCbUfZHrftWr4pfWfBWYfCbW4pqTfCfk4Qxr4QfTftWXfQx_fBWXfplkfBXUIGjkHF8T5tXkiFXwxrbTHncQimIvJ%3DXKHmzUI9EQiGIw&ctag=pd_sl_02cd850a4dec5ea43687390e0e4d169c930b3efc87cb61d2d3aaec14",
+				"sponsored_impression_url": "https://imp.mt48.net/static?id=7RHzfOIXjFEYsBdvIpka4ZHW1pqkfCbYfQDk4Zqm1tIWHG7kJnEYgFIvxnEnJrNWxnwmHF4%2Bj%3DwTIGfnxrEOfCkXfplkfBIZjF8YgF%2Bwjr3NHOIZjF8ZgCxkfZbX7nckxYdvIpkZfCLY4CDr4ZqnHF3m5FwqgCxkfZbX7n4NJGeNiFjU5FwqgC8Xfpbk1BINI%3DjYJrEW5FwqgClZ4pHr4ZHZ7R3%2Bx%3DDuiF2zfOIZJ%3Dzk5F%2BdJF7wxQkX7n4YIFckiGIw5FwqgCLZfplnx%3DXNHmEuIF%2Bk5FwqgClWfpxnHF2uxmETIF4kiFzU5FwqgCLr4Qba1C2XfpL%2B4QHW1C2d",
+				"sponsored_tile_id": 74301,
+				"partner": "amp",
+				"favicon": "https://tiles-cdn.prod.ads.prod.webservices.mozgcp.net/CAP5k4gWqcBGwir7bEEmBWveLMtvldFu-y_kyO3txFA=.9991.jpg",
+				"faviconSize": 200,
+				"typedBonus": true
+			},
+			{
+				"isDefault": true,
+				"url": "https://www.expedia.com/?locale=en_US&siteid=1&semcid=US.UB.ADMARKETPLACE.GT-C-EN.HOTEL&SEMDTL=a1219867.b115417125.g1.l1.e1C.m187608941022547968.r1.c1.j1.k1.d1.h1.i1.n1.o1.p1.q1.s1.t1.x1.f1.u1.v1.w1&mfadid=adm",
+				"hostname": "expedia",
+				"sendAttributionRequest": false,
+				"label": "Expedia",
+				"show_sponsored_label": true,
+				"sponsored_position": 2,
+				"sponsored_click_url": "https://bridge.lga1.admarketplace.net/ctp?version=1.0.0&encp=HF3vIpkY7RcdjpkX4Z8k1CDk4Zq_fQ2d7ncqjnaz7nIZgGeYJm2uHF3wJnjvJnDufpHUJ%3DjNfBIkxZdWxnzq5FcqIF_RiF_w5Cbm5nXRHClnJr7Rirxzj%3DwTIG4W7n7vI%3D3wxweNxncuxZdg3%3DfYCD3R4D_l3Gj4iqqXCq3Q4D_SIYIuxr2zj%3DwTIG4W7R7kx%3DwqgFcuIEzn4C2r4Q2YIFfmHZbkfCjwfmHdf%3D2W1CNN1F2_fm3qfEzq4Q8k4pHm1pH_fCfZ4CLmHmEQ4Zxr4%3D7O4%3D8mHZHd4YIWHQkXfpbUftIWjGfYiCkXfplnx9EZfFqzfCbX7Redx%3DqzfC8a1Clnj94ZfCkZfCLY4CDr4ZLnj94WjF8zfZlafQDd4Zxr7nckxmwqgCfX1p8d4Cxr1BINj94TgC8njG3vgCxr4Zxm7RERiCkY7R4YjpkX4tIuxr3WGmwqspkufBIvJRIvIpkufBIks%3DwqgCbnirjvI9LzftIYj97QgCbnxR3WiZkW7njkgCbnirjvIpkZ4CDZfCxY1ClnxGEwxRwvIpka4ZHW1pqkfCbYfQDk4Zqm1tIuxr3kgCbnxR3OJpdnHFXZIBIWj93vIpkW7n3WHmwqgC8WfplZfZqm1C8nHr3_iF2zfOIQxnEvIpkr4Qqnx%3DXvIpkXfpbr7n3Zx%3D7vIpkXfCD_7n3Zx%3DcqjnwqgClX1pfnI94WHGEqjnwqgClm1pfnI94WiFzvIpkXfCDm7ncqxmXvIpka4ZHW1pqkfCba1CHmfpqZfOIZJ%3DzkJREugC8nIF_EDqWzClNefmIFE%3DLaEZjQiZNniFu4EZNY4qzrHGcGE%3DuIjk34IqcH19N3xExk2r8dDmE8EceVs%3DwoDC7lflkWCldVf9c7EFEwxqDYCrvi3pIGiqqXBODY3nXu2ku6xODY3Rqriw7UEc2wfqIWFFjD2GIF3QLk4nE4xpe2IcwR4FcoHF7T1cvQCkxaDw4PsQjmCEEeir7OE%3DzY4Dd5sEjE19c24l_FInAY4D%2FaC%3Dv3Ik3SiQeBfpE8I%3Dv6iqvn2FXqCZcXDrvDHnISsR72j%3DXCClcgfrwUI946CEEnBnNXHnDW4njSCENO3dvDxcEqsqz%3DidIlCEEU2qIYDp4G3ODY2nwICF_XCq4GDm_OfREpCw4msnEkDGEcfmdfCnEgB%3DwgxwIwJdIkIRems%3D3XFlI%2FfwvvEmjNIYDZ3tIYj%3DzZgB%2FM6QTS1Y%2FniFwQgBkX1YkX1YkX1YkX1YkX7n4WgC8U4pLWftWr4pqY4BWYfCqa4QxTfCDkfCxXfQDTftWXfQx_fBWXfplkfBXUIGjkHF8T5tXkiFXwxrbTHncQimIvJ%3DXKHmzUI9EQiGIw&ctag=87608941022547968",
+				"sponsored_impression_url": "https://imp.mt48.net/static?id=7RHzfOIXjFEYsBdvIpka4ZHW1pqkfCbYfQDk4Zqm1tIWHG7kJnEYgFIvxnEnJrNWxnwmHF4%2Bj%3DwTIGfnxrEOfCkXfplkfBIZjF8YgF%2Bwjr3NHOIZjF8ZgCxk1C8d7nckxYdvIpkZfCLY4CDr4ZqnHF3m5FwqgCxk1C8d7n4NJGeNiFjU5FwqgC8X1CLm4YINI%3DjYJrEW5FwqgCld4plrfC8d7R3%2Bx%3DDuiF2zfOIZJ%3Dzk5F%2BdJF7wxQkY7n4YIFckiGIw5FwqgCxm1BIWJ%3DcQIFdwJR2uiF2zfCbW4YINItdZIFXwHr3vJmauiF2z1pxmfpL%2B4plW1pqm4Qb%2BfZ8y",
+				"sponsored_tile_id": 74925,
+				"partner": "amp",
+				"favicon": "https://tiles-cdn.prod.ads.prod.webservices.mozgcp.net/m6BvG6Rcntmafem2bLfA5IktKm1SEwqO2E4XIjaC12c=.10862.jpg",
+				"faviconSize": 200,
+				"typedBonus": true
+			},
+			{
+				"bookmarkGuid": null,
+				"frecency": 2000,
+				"guid": "MaX3j5MiF05m",
+				"lastVisitDate": 1724957014350,
+				"title": "visulastudio.com",
+				"url": "https://code.visulastudio.com/",
+				"type": "history",
+				"screenshot": "moz-page-thumb://thumbnails/?url=https%3A%2F%2Fcode.visulastudio.com%2F&revision=2277",
+				"hostname": "code.visulastudio",
+				"typedBonus": true
+			},
+			{
+				"isDefault": true,
+				"url": "https://www.youtube.com/",
+				"hostname": "youtube",
+				"sendAttributionRequest": false,
+				"label": "YouTube",
+				"tippyTopIcon": "chrome://activity-stream/content/data/content/tippytop/images/youtube-com@2x.png",
+				"smallFavicon": "chrome://activity-stream/content/data/content/tippytop/favicons/youtube-com.png",
+				"typedBonus": true
+			},
+			{
+				"isDefault": true,
+				"url": "https://www.facebook.com/",
+				"hostname": "facebook",
+				"sendAttributionRequest": false,
+				"label": "Facebook",
+				"tippyTopIcon": "chrome://activity-stream/content/data/content/tippytop/images/facebook-com@2x.png",
+				"smallFavicon": "chrome://activity-stream/content/data/content/tippytop/favicons/facebook-com.ico",
+				"typedBonus": true
+			},
+			{
+				"isDefault": true,
+				"url": "https://www.reddit.com/",
+				"hostname": "reddit",
+				"sendAttributionRequest": false,
+				"label": "Reddit",
+				"tippyTopIcon": "chrome://activity-stream/content/data/content/tippytop/images/reddit-com@2x.png",
+				"smallFavicon": "chrome://activity-stream/content/data/content/tippytop/favicons/reddit-com.png",
+				"typedBonus": true
+			},
+			{
+				"isDefault": true,
+				"url": "https://www.wikipedia.org/",
+				"hostname": "wikipedia",
+				"sendAttributionRequest": false,
+				"label": "Wikipedia",
+				"tippyTopIcon": "chrome://activity-stream/content/data/content/tippytop/images/wikipedia-org@2x.png",
+				"smallFavicon": "chrome://activity-stream/content/data/content/tippytop/favicons/wikipedia-org.ico",
+				"typedBonus": true
+			},
+			{
+				"isDefault": true,
+				"url": "https://twitter.com/",
+				"hostname": "twitter",
+				"sendAttributionRequest": false,
+				"label": "Twitter",
+				"tippyTopIcon": "chrome://activity-stream/content/data/content/tippytop/images/twitter-com@2x.png",
+				"smallFavicon": "chrome://activity-stream/content/data/content/tippytop/favicons/twitter-com.ico",
+				"typedBonus": true
+			}
+		],
+		"pref": {
+			"collapsed": false
+		}
+	},
+	"ASRouter": {
+		"initialized": false
+	},
+	"Prefs": {
+		"initialized": true,
+		"values": {
+			"default.sites": "https://www.youtube.com/,https://www.facebook.com/,https://www.amazon.com/,https://www.reddit.com/,https://www.wikipedia.org/,https://twitter.com/",
+			"feeds.section.topstories.options": "{\"api_key_pref\":\"extensions.pocket.oAuthConsumerKey\",\"hidden\":false,\"provider_icon\":\"chrome://global/skin/icons/pocket.svg\",\"provider_name\":\"Pocket\",\"read_more_endpoint\":\"https://getpocket.com/explore/trending?src=fx_new_tab\",\"stories_endpoint\":\"https://getpocket.cdn.mozilla.net/v3/firefox/global-recs?version=3&consumer_key=$apiKey&locale_lang=en-US&feed_variant=default_spocs_on\",\"stories_referrer\":\"https://getpocket.com/recommendations\",\"topics_endpoint\":\"https://getpocket.cdn.mozilla.net/v3/firefox/trending-topics?version=2&consumer_key=$apiKey&locale_lang=en-US\",\"show_spocs\":true}",
+			"feeds.topsites": true,
+			"hideTopSitesTitle": false,
+			"showSponsored": true,
+			"system.showSponsored": true,
+			"showSponsoredTopSites": true,
+			"pocketCta": "{\"cta_button\":\"\",\"cta_text\":\"\",\"cta_url\":\"\",\"use_cta\":false}",
+			"showSearch": true,
+			"topSitesRows": 1,
+			"telemetry": true,
+			"telemetry.ut.events": false,
+			"telemetry.structuredIngestion.endpoint": "https://incoming.telemetry.mozilla.org/submit",
+			"section.highlights.includeVisited": true,
+			"section.highlights.includeBookmarks": true,
+			"section.highlights.includePocket": true,
+			"section.highlights.includeDownloads": true,
+			"section.highlights.rows": 1,
+			"section.topstories.rows": 1,
+			"sectionOrder": "topsites,topstories,highlights",
+			"improvesearch.noDefaultSearchTile": true,
+			"improvesearch.topSiteSearchShortcuts.searchEngines": "google,amazon",
+			"improvesearch.topSiteSearchShortcuts.havePinned": "",
+			"asrouter.devtoolsEnabled": false,
+			"asrouter.providers.onboarding": "{\"id\":\"onboarding\",\"type\":\"local\",\"localProvider\":\"OnboardingMessageProvider\",\"enabled\":true,\"exclude\":[]}",
+			"discoverystream.flight.blocks": "{}",
+			"discoverystream.config": "{\"api_key_pref\":\"extensions.pocket.oAuthConsumerKey\",\"collapsible\":true,\"enabled\":true}",
+			"discoverystream.endpoints": "https://getpocket.cdn.mozilla.net/,https://firefox-api-proxy.cdn.mozilla.net/,https://spocs.getpocket.com/",
+			"discoverystream.isCollectionDismissible": true,
+			"discoverystream.onboardingExperience.dismissed": false,
+			"discoverystream.region-basic-layout": false,
+			"discoverystream.spoc.impressions": "{}",
+			"discoverystream.endpointSpocsClear": "https://spocs.getpocket.com/user",
+			"discoverystream.rec.impressions": "{}",
+			"showRecentSaves": true,
+			"feeds.aboutpreferences": true,
+			"feeds.newtabinit": true,
+			"feeds.places": true,
+			"feeds.prefs": true,
+			"feeds.sections": true,
+			"feeds.section.highlights": false,
+			"feeds.system.topstories": true,
+			"feeds.systemtick": true,
+			"feeds.telemetry": true,
+			"feeds.favicon": true,
+			"feeds.system.topsites": true,
+			"feeds.recommendationprovider": true,
+			"feeds.discoverystreamfeed": true,
+			"isPrivateBrowsingEnabled": true,
+			"platform": "linux",
+			"region": "US",
+			"fxa_endpoint": "https://accounts.firefox.com/",
+			"appUpdateChannel": "release",
+			"improvesearch.topSiteSearchShortcuts": true,
+			"mayHaveSponsoredTopSites": true,
+			"improvesearch.handoffToAwesomebar": true,
+			"featureConfig": {
+				"customizationMenuEnabled": null,
+				"topSitesContileEnabled": true
+			},
+			"pocketConfig": {
+				"spocPositions": "1,5,7,11,18,20",
+				"spocTopsitesPositions": "2",
+				"contileTopsitesPositions": "0,1",
+				"spocAdTypes": "",
+				"spocZoneIds": "",
+				"spocTopsitesAdTypes": "",
+				"spocTopsitesZoneIds": "",
+				"spocTopsitesPlacementEnabled": true,
+				"spocSiteId": "",
+				"widgetPositions": "",
+				"hybridLayout": false,
+				"hideCardBackground": false,
+				"fourCardLayout": false,
+				"newFooterSection": false,
+				"saveToPocketCard": true,
+				"saveToPocketCardRegions": "",
+				"hideDescriptions": false,
+				"hideDescriptionsRegions": "",
+				"compactGrid": false,
+				"compactImages": false,
+				"imageGradient": false,
+				"titleLines": 3,
+				"descLines": 3,
+				"onboardingExperience": false,
+				"essentialReadsHeader": false,
+				"editorsPicksHeader": false,
+				"recentSavesEnabled": false,
+				"readTime": true,
+				"newSponsoredLabel": false,
+				"sendToPocket": true,
+				"recsPersonalized": false,
+				"spocsPersonalized": true,
+				"spocsCacheTimeout": null,
+				"ctaButtonSponsors": "",
+				"ctaButtonVariant": "",
+				"spocMessageVariant": "",
+				"regionStoriesConfig": "US,DE,CA,GB,IE,CH,AT,BE,IN,FR,IT,ES",
+				"regionBffConfig": "US,DE,CA,GB,IE,CH,AT,BE,IN,FR,IT,ES",
+				"regionStoriesBlock": "",
+				"localeListConfig": "",
+				"regionSpocsConfig": "US,CA,DE,GB,FR,IT,ES",
+				"topSitesContileSovEnabled": true
+			},
+			"logowordmark.alwaysVisible": true,
+			"feeds.section.topstories": true,
+			"discoverystream.enabled": true,
+			"discoverystream.sponsored-collections.enabled": false,
+			"discoverystream.hardcoded-basic-layout": false,
+			"discoverystream.personalization.enabled": true,
+			"discoverystream.personalization.override": false,
+			"discoverystream.personalization.modelKeys": "nb_model_arts_and_entertainment, nb_model_autos_and_vehicles, nb_model_beauty_and_fitness, nb_model_blogging_resources_and_services, nb_model_books_and_literature, nb_model_business_and_industrial, nb_model_computers_and_electronics, nb_model_finance, nb_model_food_and_drink, nb_model_games, nb_model_health, nb_model_hobbies_and_leisure, nb_model_home_and_garden, nb_model_internet_and_telecom, nb_model_jobs_and_education, nb_model_law_and_government, nb_model_online_communities, nb_model_people_and_society, nb_model_pets_and_animals, nb_model_real_estate, nb_model_reference, nb_model_science, nb_model_shopping, nb_model_sports, nb_model_travel",
+			"discoverystream.spocs-endpoint": "",
+			"discoverystream.spocs-endpoint-query": "",
+			"newNewtabExperience.colors": "#0090ED,#FF4F5F,#2AC3A2,#FF7139,#A172FF,#FFA437,#FF2A8A"
+		}
+	},
+	"Dialog": {
+		"visible": false,
+		"data": {}
+	},
+	"Sections": [
+		{
+			"title": {
+				"id": "newtab-section-header-stories"
+			},
+			"rows": [],
+			"enabled": true,
+			"id": "topstories",
+			"pref": {
+				"titleString": {
+					"id": "home-prefs-recommended-by-header-generic"
+				},
+				"descString": {
+					"id": "home-prefs-recommended-by-description-generic"
+				},
+				"nestedPrefs": [
+					{
+						"name": "showSponsored",
+						"titleString": "home-prefs-recommended-by-option-sponsored-stories",
+						"icon": "icon-info",
+						"eventSource": "POCKET_SPOCS"
+					}
+				],
+				"learnMore": {
+					"link": {
+						"href": "https://getpocket.com/firefox/new_tab_learn_more",
+						"id": "home-prefs-recommended-by-learn-more"
+					}
+				},
+				"collapsed": false,
+				"feed": "feeds.section.topstories"
+			},
+			"shouldHidePref": false,
+			"eventSource": "TOP_STORIES",
+			"icon": "chrome://global/skin/icons/pocket.svg",
+			"learnMore": {
+				"link": {
+					"href": "https://getpocket.com/firefox/new_tab_learn_more",
+					"message": {
+						"id": "newtab-pocket-learn-more"
+					}
+				}
+			},
+			"compactCards": false,
+			"rowsPref": "section.topstories.rows",
+			"maxRows": 4,
+			"availableLinkMenuOptions": [
+				"CheckBookmarkOrArchive",
+				"CheckSavedToPocket",
+				"Separator",
+				"OpenInNewWindow",
+				"OpenInPrivateWindow",
+				"Separator",
+				"BlockUrl"
+			],
+			"emptyState": {
+				"message": {
+					"id": "newtab-empty-section-topstories-generic"
+				},
+				"icon": "check"
+			},
+			"shouldSendImpressionStats": true,
+			"dedupeFrom": [
+				"highlights"
+			],
+			"options": {
+				"api_key_pref": "extensions.pocket.oAuthConsumerKey",
+				"hidden": false,
+				"provider_icon": "chrome://global/skin/icons/pocket.svg",
+				"provider_name": "Pocket",
+				"read_more_endpoint": "https://getpocket.com/explore/trending?src=fx_new_tab",
+				"stories_endpoint": "https://getpocket.cdn.mozilla.net/v3/firefox/global-recs?version=3&consumer_key=$apiKey&locale_lang=en-US&feed_variant=default_spocs_on",
+				"stories_referrer": "https://getpocket.com/recommendations",
+				"topics_endpoint": "https://getpocket.cdn.mozilla.net/v3/firefox/trending-topics?version=2&consumer_key=$apiKey&locale_lang=en-US",
+				"show_spocs": true
+			},
+			"contextMenuOptions": [
+				"CheckBookmarkOrArchive",
+				"CheckSavedToPocket",
+				"Separator",
+				"OpenInNewWindow",
+				"OpenInPrivateWindow",
+				"Separator",
+				"BlockUrl"
+			],
+			"initialized": false,
+			"dedupeConfigurations": [
+				{
+					"id": "topstories",
+					"dedupeFrom": [
+						"highlights"
+					]
+				}
+			]
+		},
+		{
+			"title": {
+				"id": "newtab-section-header-recent-activity"
+			},
+			"rows": [],
+			"enabled": false,
+			"id": "highlights",
+			"pref": {
+				"titleString": {
+					"id": "home-prefs-recent-activity-header"
+				},
+				"descString": {
+					"id": "home-prefs-recent-activity-description"
+				},
+				"nestedPrefs": [
+					{
+						"name": "section.highlights.includeVisited",
+						"titleString": "home-prefs-highlights-option-visited-pages"
+					},
+					{
+						"name": "section.highlights.includeBookmarks",
+						"titleString": "home-prefs-highlights-options-bookmarks"
+					},
+					{
+						"name": "section.highlights.includeDownloads",
+						"titleString": "home-prefs-highlights-option-most-recent-download"
+					},
+					{
+						"name": "section.highlights.includePocket",
+						"titleString": "home-prefs-highlights-option-saved-to-pocket",
+						"hidden": false
+					}
+				],
+				"collapsed": false,
+				"feed": "feeds.section.highlights"
+			},
+			"shouldHidePref": false,
+			"eventSource": "HIGHLIGHTS",
+			"icon": "chrome://global/skin/icons/highlights.svg",
+			"compactCards": true,
+			"rowsPref": "section.highlights.rows",
+			"maxRows": 4,
+			"emptyState": {
+				"message": {
+					"id": "newtab-empty-section-highlights"
+				},
+				"icon": "chrome://global/skin/icons/highlights.svg"
+			},
+			"shouldSendImpressionStats": false,
+			"options": {},
+			"initialized": false
+		}
+	],
+	"Pocket": {
+		"isUserLoggedIn": null,
+		"pocketCta": {},
+		"waitingForSpoc": true
+	},
+	"Personalization": {
+		"lastUpdated": null,
+		"initialized": false
+	},
+	"DiscoveryStream": {
+		"config": {
+			"api_key_pref": "extensions.pocket.oAuthConsumerKey",
+			"collapsible": true,
+			"enabled": true
+		},
+		"layout": [
+			{
+				"width": 12,
+				"components": [
+					{
+						"type": "TopSites",
+						"header": {
+							"title": {
+								"id": "newtab-section-header-topsites"
+							}
+						},
+						"placement": {
+							"name": "sponsored-topsites",
+							"ad_types": [
+								3120
+							],
+							"zone_ids": [
+								280143
+							]
+						},
+						"spocs": {
+							"probability": 1,
+							"prefs": [
+								"showSponsoredTopSites"
+							],
+							"positions": [
+								{
+									"index": 2
+								}
+							]
+						},
+						"properties": {}
+					},
+					{
+						"type": "Message",
+						"essentialReadsHeader": false,
+						"editorsPicksHeader": false,
+						"header": {
+							"title": {
+								"id": "newtab-section-header-stories"
+							},
+							"subtitle": "",
+							"link_text": {
+								"id": "newtab-pocket-learn-more"
+							},
+							"link_url": "https://getpocket.com/firefox/new_tab_learn_more",
+							"icon": "chrome://global/skin/icons/pocket.svg"
+						},
+						"properties": {
+							"spocMessageVariant": ""
+						},
+						"styles": {
+							".ds-message": "margin-bottom: -20px"
+						}
+					},
+					{
+						"type": "CardGrid",
+						"properties": {
+							"items": 21,
+							"hybridLayout": false,
+							"hideCardBackground": false,
+							"fourCardLayout": false,
+							"compactGrid": false,
+							"essentialReadsHeader": false,
+							"editorsPicksHeader": false,
+							"onboardingExperience": false,
+							"ctaButtonSponsors": [
+								""
+							],
+							"ctaButtonVariant": "",
+							"spocMessageVariant": ""
+						},
+						"widgets": {
+							"positions": [],
+							"data": [
+								{
+									"type": "TopicsWidget"
+								}
+							]
+						},
+						"cta_variant": "link",
+						"header": {
+							"title": ""
+						},
+						"placement": {
+							"name": "spocs",
+							"ad_types": [
+								3617
+							],
+							"zone_ids": [
+								217758,
+								217995
+							]
+						},
+						"feed": {
+							"embed_reference": null,
+							"url": "https://firefox-api-proxy.cdn.mozilla.net/desktop/v1/recommendations?locale=$locale&region=$region&count=30"
+						},
+						"spocs": {
+							"probability": 1,
+							"positions": [
+								{
+									"index": 1
+								},
+								{
+									"index": 5
+								},
+								{
+									"index": 7
+								},
+								{
+									"index": 11
+								},
+								{
+									"index": 18
+								},
+								{
+									"index": 20
+								}
+							]
+						}
+					},
+					{
+						"type": "Navigation",
+						"newFooterSection": false,
+						"properties": {
+							"alignment": "left-align",
+							"links": [
+								{
+									"name": "Self improvement",
+									"url": "https://getpocket.com/explore/self-improvement?utm_source=pocket-newtab"
+								},
+								{
+									"name": "Food",
+									"url": "https://getpocket.com/explore/food?utm_source=pocket-newtab"
+								},
+								{
+									"name": "Entertainment",
+									"url": "https://getpocket.com/explore/entertainment?utm_source=pocket-newtab"
+								},
+								{
+									"name": "Health & fitness",
+									"url": "https://getpocket.com/explore/health?utm_source=pocket-newtab"
+								},
+								{
+									"name": "Science",
+									"url": "https://getpocket.com/explore/science?utm_source=pocket-newtab"
+								},
+								{
+									"name": "More recommendations ›",
+									"url": "https://getpocket.com/explore?utm_source=pocket-newtab"
+								}
+							],
+							"extraLinks": [
+								{
+									"name": "Career",
+									"url": "https://getpocket.com/explore/career?utm_source=pocket-newtab"
+								},
+								{
+									"name": "Technology",
+									"url": "https://getpocket.com/explore/technology?utm_source=pocket-newtab"
+								}
+							],
+							"privacyNoticeURL": {
+								"url": "https://www.mozilla.org/privacy/firefox/#recommend-relevant-content",
+								"title": {
+									"id": "newtab-section-menu-privacy-notice"
+								}
+							}
+						},
+						"header": {
+							"title": {
+								"id": "newtab-pocket-read-more"
+							}
+						},
+						"styles": {
+							".ds-navigation": "margin-top: -10px;"
+						}
+					}
+				]
+			}
+		],
+		"isPrivacyInfoModalVisible": false,
+		"isCollectionDismissible": true,
+		"feeds": {
+			"data": {
+				"https://firefox-api-proxy.cdn.mozilla.net/desktop/v1/recommendations?locale=$locale&region=$region&count=30": {
+					"lastUpdated": 1724956970299,
+					"personalized": false,
+					"data": {
+						"settings": {},
+						"recommendations": [
+							{
+								"id": 3533371123915274,
+								"url": "https://www.theatlantic.com/podcasts/archive/2024/08/civil-rights-movement-law-slaves-court/679621/?utm_source=pocket-newtab-en-us",
+								"title": "The Rights of American Slaves",
+								"excerpt": "The hidden history of how some enslaved people exercised legal rights",
+								"publisher": "The Atlantic",
+								"raw_image_src": "https://cdn.theatlantic.com/thumbor/NEKYNTZFx6wMkPDJotSdHuO7iSk=/0x58:2880x1558/1200x625/media/img/mt/2024/08/GOP_episode_art_civilrights_full/original.jpg",
+								"recommendation_id": "35c8294a-f960-4635-aee1-66f3ceb44620",
+								"score": 1
+							},
+							{
+								"id": 1846008887901020,
+								"url": "https://getpocket.com/explore/item/to-fix-the-social-sciences-look-to-the-dark-ages-of-medicine?utm_source=pocket-newtab-en-us",
+								"title": "To Fix the Social Sciences, Look to the “Dark Ages” of Medicine",
+								"excerpt": "If medicine could break with its barbarous past, why shouldn’t the same path be open to the social sciences?",
+								"publisher": "MIT Press Reader",
+								"raw_image_src": "https://s3.amazonaws.com/pocket-curatedcorpusapi-prod-images/30374318-79f0-496a-ac7b-c85112f685cb.jpeg",
+								"recommendation_id": "fac9aec0-f4d8-4069-bea3-116378a367a4",
+								"score": 1
+							},
+							{
+								"id": 6963769597322289,
+								"url": "https://www.cnbc.com/2024/08/14/designer-dupe-demand-soars-a-sign-of-the-economic-times.html?utm_source=pocket-newtab-en-us",
+								"title": "Designer ‘Dupes’ Go Mainstream As Shoppers Choose Affordability Over Luxury",
+								"excerpt": "More shoppers are buying dupes on TikTok Shop and other ecommerce platforms as a way to participate in a trend without breaking the bank.",
+								"publisher": "CNBC",
+								"raw_image_src": "https://image.cnbcfm.com/api/v1/image/108017994-1723122166702-gettyimages-2039511761-be3i9166copy.jpeg?v=1723650580&w=1920&h=1080",
+								"recommendation_id": "b601570c-87f2-478e-a1fa-1f6df64612b2",
+								"score": 1
+							},
+							{
+								"id": 7786101874051222,
+								"url": "https://www.usatoday.com/story/news/education/2024/08/26/college-palestinian-protests/74873260007/?utm_source=pocket-newtab-en-us",
+								"title": "Will Protests Tied to Israel-Hamas War Return? Colleges Are Bracing Either Way.",
+								"excerpt": "As college students return to campus this fall, administrators’ responses to protests vary.",
+								"publisher": "USA TODAY",
+								"raw_image_src": "https://www.usatoday.com/gcdn/authoring/authoring-images/2024/04/25/USAT/73448000007-usatsi-23103657-168401916-lowres.jpg?crop=2999,1687,x0,y156&width=2999&height=1687&format=pjpg&auto=webp",
+								"recommendation_id": "0ddaa6a4-57cd-434f-ab19-e6b5c4634d5e",
+								"score": 1
+							},
+							{
+								"id": 3655696732372034,
+								"url": "https://www.latimes.com/california/story/2024-08-28/they-called-him-chandler-and-a-moron-matthew-perry-was-exploited-before-his-death-feds-say?utm_source=pocket-newtab-en-us",
+								"title": "They Mocked Him As ‘Chandler’ and ‘Moron’ ",
+								"excerpt": "Federal authorities have depicted a scheme in which medical professionals and street dealers exploited the “Friends” actor, who had been open about his years-long struggle with addiction, to enrich themselves. ",
+								"publisher": "Los Angeles Times",
+								"raw_image_src": "https://ca-times.brightspotcdn.com/dims4/default/dc87e10/2147483647/strip/true/crop/7299x3832+0+518/resize/1200x630!/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2Fc6%2Ff1%2F3b91736d4e558eac767ca53ab180%2F1285494-bk-lat-fob-day-1-roaming-1093.jpg",
+								"recommendation_id": "f6691d14-ba7e-4243-bd20-75c227f4372c",
+								"score": 1
+							},
+							{
+								"id": 4795218665050259,
+								"url": "https://www.scientificamerican.com/article/drastic-molecular-shifts-in-peoples-40s-and-60s-might-explain-age-related/?utm_source=pocket-newtab-en-us",
+								"title": "Why Aging Comes in Dramatic Waves in Our 40s and 60s",
+								"excerpt": "A new study suggests that waves of aging-related changes occur at two distinct points in our life",
+								"publisher": "Scientific American",
+								"raw_image_src": "https://static.scientificamerican.com/dam/m/1d2d0064663f6405/original/SA_Aging-40-and-60-years-old.jpg?w=1200",
+								"recommendation_id": "7766c7a0-999d-4264-8919-84277dd5da2b",
+								"score": 1
+							},
+							{
+								"id": 5105008429757688,
+								"url": "https://time.com/7007857/ultra-processed-foods-advocate/?utm_source=pocket-newtab-en-us",
+								"title": "What If Ultra-Processed Foods Aren’t As Bad As You Think?",
+								"excerpt": "Not all ultra-processed foods are the same.",
+								"publisher": "Time",
+								"raw_image_src": "https://api.time.com/wp-content/uploads/2024/08/1_-MOUNTAIN_CiurejLochman_FINAL.jpeg?quality=85&w=1200&h=628&crop=1",
+								"recommendation_id": "7cfd75c7-bba1-4c56-a4cd-8ef82b33f5a5",
+								"score": 1
+							},
+							{
+								"id": 4661892794046078,
+								"url": "https://www.bbc.com/future/article/20240823-why-some-people-are-volunteering-to-be-infected-with-diseases?utm_source=pocket-newtab-en-us",
+								"title": "Why Some People Are Volunteering to Be Infected With Diseases",
+								"excerpt": "Scientists are turning to a controversial approach to test new vaccines and treatments by deliberately infecting volunteers with potentially deadly viruses, parasites and bacteria.",
+								"publisher": "BBC",
+								"raw_image_src": "https://ichef.bbci.co.uk/images/ic/480xn/p0jl95jn.jpg.webp",
+								"recommendation_id": "56ff8ff5-db02-4e1c-9694-769d43e7451e",
+								"score": 1
+							},
+							{
+								"id": 4580124248932781,
+								"url": "https://www.vulture.com/article/oasis-reunion-dates-noel-liam-gallagher-predictions.html?utm_source=pocket-newtab-en-us",
+								"title": "10 Things We Want From the Oasis Reunion",
+								"excerpt": "First: Hire a family therapist.",
+								"publisher": "Vulture",
+								"raw_image_src": "https://pyxis.nymag.com/v1/imgs/a45/6f7/0c58ec3ec0be26baf7079149b71f8602c3-oasis-1.1x.rsocial.w1200.jpg",
+								"recommendation_id": "fb38c9ad-d396-46e3-b6bb-4caa235e1a83",
+								"score": 1
+							},
+							{
+								"id": 3044204077419765,
+								"url": "https://bigthink.com/starts-with-a-bang/weight-mass-not-same/?utm_source=pocket-newtab-en-us",
+								"title": "It’s Important That Weight and Mass Are Not the Same",
+								"excerpt": "Here on Earth, we commonly use terms like weight (in pounds) and mass (in kilograms) as though they’re interchangeable. They’re not.",
+								"publisher": "Big Think",
+								"raw_image_src": "https://bigthink.com/wp-content/uploads/2024/08/earth.jpg",
+								"recommendation_id": "ce8c0f43-5317-422a-86cf-f34760cced02",
+								"score": 1
+							},
+							{
+								"id": 3242925982221067,
+								"url": "https://harpers.org/archive/2024/09/the-thin-purple-line-jasper-craven-private-security-guard/?utm_source=pocket-newtab-en-us",
+								"title": "The Dubious Rise of the Private-Security Industry ",
+								"excerpt": "The “thin purple line” has unofficially upgraded the guard to the echelon of first responder. ",
+								"publisher": "Harper's Magazine",
+								"raw_image_src": "https://harpers.org/wp-content/uploads/2024/07/CUT-9bPREVIEWCARD-scaled.jpg",
+								"recommendation_id": "52150067-7134-43c0-a5f0-75129c1ff779",
+								"score": 1
+							},
+							{
+								"id": 2423883492323505,
+								"url": "https://www.romper.com/parenting/the-parents-who-refuse-to-track-their-kids?utm_source=pocket-newtab-en-us",
+								"title": "The Parents Who Refuse to Track Their Kids",
+								"excerpt": "For most parents with access to technology and the privilege to consider how to use it, these decisions are hard, ongoing, and personal.",
+								"publisher": "Romper",
+								"raw_image_src": "https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/3f6a451f-9e85-4c48-98de-aee923386d33.jpeg",
+								"recommendation_id": "29be3718-2ba2-4f0c-a740-c185c1628f85",
+								"score": 1
+							},
+							{
+								"id": 8816458931452665,
+								"url": "https://www.discovermagazine.com/the-sciences/why-is-space-so-cold-it-has-to-do-with-kinetic-energy?utm_source=pocket-newtab-en-us",
+								"title": "Why Is Space So Cold? It Has to Do With Kinetic Energy",
+								"excerpt": "Why is it so cold in space? In the vast cosmic void, temperatures plunge as low as negative 454 degrees Fahrenheit.",
+								"publisher": "Discover Magazine",
+								"raw_image_src": "https://images.ctfassets.net/cnu0m8re1exe/2su9rfHkrXkf5uTzrDAxsn/eb0e6dc739692b61194323afde9f47c5/cold-space.jpg?fm=jpg&fl=progressive&w=660&h=433&fit=fill",
+								"recommendation_id": "4e73fcbc-0f82-4d75-83b3-b0bdc2e1b187",
+								"score": 1
+							},
+							{
+								"id": 5570812107556224,
+								"url": "https://www.npr.org/2024/08/23/nx-s1-5082422/gas-prices-lower-pump-summer?utm_source=pocket-newtab-en-us",
+								"title": "Gas Prices Are Down. We Could Be Headed for Lows Not Seen Since 2021",
+								"excerpt": "Pump prices having been falling all summer, and as Labor Day approaches, they’re 47 cents lower than this time last year. Some analysts see $3 gasoline in our future.",
+								"publisher": "NPR",
+								"raw_image_src": "https://npr.brightspotcdn.com/dims3/default/strip/false/crop/7037x3958+0+362/resize/1400/quality/100/format/jpeg/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2F5f%2Fe9%2F0b5c07df4ecd9a81393999a09a93%2Fgettyimages-2157178123.jpg",
+								"recommendation_id": "e7726ecd-1977-411c-8334-89a5ea35041f",
+								"score": 1
+							},
+							{
+								"id": 4407991906929131,
+								"url": "https://www.nytimes.com/2024/08/28/magazine/the-bear-sunny-lonely-tv.html?utm_source=pocket-newtab-en-us",
+								"title": "Feel Good T.V. Is Great. But Lonely T.V. Gives Us What We Need.",
+								"excerpt": "Dark comedies like “The Bear” and “Sunny,” provide a contrast to contemporary comedy’s relentlessly upbeat streak.",
+								"publisher": "The New York Times",
+								"raw_image_src": "https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/e7bb1c98-c9c9-4773-aa04-11a1970f40e3.jpeg",
+								"recommendation_id": "5c766fbc-b7c3-47b1-a1bf-15800c829505",
+								"score": 1
+							},
+							{
+								"id": 3683459071300862,
+								"url": "https://www.eater.com/24214031/how-to-use-pawpaws-lassi-preserves-curd-cornbread?utm_source=pocket-newtab-en-us",
+								"title": "What Do I Do With Pawpaws?",
+								"excerpt": "The distinctly North American fruit has a sweet, tropical flavor that makes it perfect for lassis, preserves, and much more",
+								"publisher": "Eater",
+								"raw_image_src": "https://cdn.vox-cdn.com/thumbor/sShIlX4i61jOUiZNs0aaF1NDIAU=/0x31:1600x869/fit-in/1200x630/cdn.vox-cdn.com/uploads/chorus_asset/file/25581260/Pawpaw_Final.jpg",
+								"recommendation_id": "9c8ced23-c6a1-460a-b233-6f5649ff0105",
+								"score": 1
+							},
+							{
+								"id": 6401982905254166,
+								"url": "https://www.fastcompany.com/91178835/4-leadership-tips-from-tara-vanderveer-the-winningest-college-basketball-coach-of-all-time?utm_source=pocket-newtab-en-us",
+								"title": "4 Leadership Tips From Tara VanDerveer, the Winningest College Basketball Coach of All Time",
+								"excerpt": "VanDerveer recommends that leaders foster trust, prioritize communication, establish routines, and offer positive reinforcement.",
+								"publisher": "Fast Company",
+								"raw_image_src": "https://images.fastcompany.com/image/upload/f_auto,q_auto,c_fit,w_1024,h_1024/wp-cms-2/2024/08/p-91178835-Tara-VanDerveer-leadership-womens-basketball.jpg",
+								"recommendation_id": "50439cb9-1544-4b67-97b8-bc988ea7c4c6",
+								"score": 1
+							},
+							{
+								"id": 90146036032288,
+								"url": "https://undark.org/2024/08/28/nudge-theory-health-care-mixed-results/?utm_source=pocket-newtab-en-us",
+								"title": "Nudge Theory Is Making Inroads in Health Care, With Mixed Results",
+								"excerpt": "Nudges designed to coax patients toward healthier choices don’t always work. Behavioral scientists want to know why.",
+								"publisher": "undark.org",
+								"raw_image_src": "https://undark.org/wp-content/uploads/2024/08/GettyImages-912013268_crop.jpg",
+								"recommendation_id": "c45621c9-6f4b-4eea-b9ca-07171b18cea8",
+								"score": 1
+							},
+							{
+								"id": 5189237925481055,
+								"url": "https://getpocket.com/explore/item/the-first-thing-you-should-clean-when-you-re-cleaning-the-living-room?utm_source=pocket-newtab-en-us",
+								"title": "Where to Start When Cleaning the Living Room",
+								"excerpt": "There’s no wrong way to clean. But where you start matters more than you might think.",
+								"publisher": "Apartment Therapy",
+								"raw_image_src": "https://s3.amazonaws.com/pocket-curatedcorpusapi-prod-images/dfd9b608-e209-44d4-a7f8-8a9b92578d7a.jpeg",
+								"recommendation_id": "7de32b1b-271d-41d8-aac0-7b0f099670b3",
+								"score": 1
+							},
+							{
+								"id": 7659063284065903,
+								"url": "https://getpocket.com/explore/item/how-the-billions-of-creatures-inside-your-gut-can-boost-mental-health?utm_source=pocket-newtab-en-us",
+								"title": "How The Billions of Creatures Inside Your Gut Can Boost Mental Health",
+								"excerpt": "Another reason to eat your kimchi.",
+								"publisher": "Inverse",
+								"raw_image_src": "https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/445eb426-b49d-468b-9a40-c08154d41c88.jpeg",
+								"recommendation_id": "4571655a-8a65-4566-80ee-48616534327b",
+								"score": 1
+							},
+							{
+								"id": 3707431337193729,
+								"url": "https://www.npr.org/2024/08/27/g-s1-19635/a-new-poll-reveals-the-worries-of-gen-z-kids-and-how-parents-can-support-them?utm_source=pocket-newtab-en-us",
+								"title": "A New Poll Reveals the Worries of Gen Z Kids — and How Parents Can Support Them",
+								"excerpt": "Fresh insights into the emotional landscape of Gen Z youth, just in time for the new school year and all the changes it may bring. ",
+								"publisher": "NPR",
+								"raw_image_src": "https://npr.brightspotcdn.com/dims3/default/strip/false/crop/2850x1603+0+297/resize/1400/quality/100/format/jpeg/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Ff1%2F08%2F7c36130146418d71a5a0b27c770e%2Fgettyimages-1495673971.jpg",
+								"recommendation_id": "bc77f29c-73e9-4db1-b17d-4c32ad3e8230",
+								"score": 1
+							},
+							{
+								"id": 1137508484862352,
+								"url": "https://www.nytimes.com/2024/08/22/style/crossfit-games-death-crisis.html?utm_source=pocket-newtab-en-us",
+								"title": "In the Wake of Tragedy, CrossFit Faces an Identity Crisis",
+								"excerpt": "CrossFit has found success as a training exercise for everyone. But the CrossFit Games may tell a different story.",
+								"publisher": "The New York Times",
+								"raw_image_src": "https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/f2f5a5dc-b3cf-4176-bd1f-cc8ce6675773.jpeg",
+								"recommendation_id": "a3026031-3494-4fc3-92f5-ee7785c68964",
+								"score": 1
+							},
+							{
+								"id": 7093793463061492,
+								"url": "https://www.technologyreview.com/2024/08/27/1096148/ray-kurzweil-futurist-ai-medicine-advances-freedom/?utm_source=pocket-newtab-en-us",
+								"title": "Ray Kurzweil: Technology Will Let Us Fully Realize Our Humanity",
+								"excerpt": "The futurist argues that advances in AI and medicine will offer us unprecedented freedom.",
+								"publisher": "MIT Technology Review",
+								"raw_image_src": "https://wp.technologyreview.com/wp-content/uploads/2024/08/240815-technologyhumanity.jpg?resize=1200,600",
+								"recommendation_id": "4dd6b275-f324-4e2b-a3a5-07756b6a3465",
+								"score": 1
+							},
+							{
+								"id": 4493973636416275,
+								"url": "https://greatergood.berkeley.edu/article/item/is_contentment_an_underrated_goal_in_life?utm_source=pocket-newtab-en-us",
+								"title": "Is Contentment an Underrated Goal in Life?",
+								"excerpt": "A new study suggests that contentment is a positive emotion with some unique benefits for people who seek it.",
+								"publisher": "Greater Good Magazine",
+								"raw_image_src": "https://greatergood.berkeley.edu/images/jcogs_img/cache/Is_Contentment_an_Underrated_Emotion__-_abcdef_-_16756da2050f2a5c89512a94e3aea69904c7adb9-fb_-_abcdef_-_fdc70d8290e0358d046ff461d05c915f0321c021.jpg",
+								"recommendation_id": "535a908f-f45e-44f4-844e-cf002958ed84",
+								"score": 1
+							},
+							{
+								"id": 7583677338045911,
+								"url": "https://www.vox.com/down-to-earth/368728/disease-coral-reefs-caribbean-bonaire-solution?utm_source=pocket-newtab-en-us",
+								"title": "These Beloved Sea Creatures Are Dying. Can Human Medicine Save Them?",
+								"excerpt": "To fight stony coral tissue loss disease, which infects and kills corals already weakened by climate change, scientists are turning to antibiotics.",
+								"publisher": "Vox",
+								"raw_image_src": "https://platform.vox.com/wp-content/uploads/sites/2/2024/08/adler_final-0447.jpg?quality=90&strip=all&crop=0%2C10.752607989199%2C100%2C78.494784021602&w=1200",
+								"recommendation_id": "1bc0a276-e00f-412d-9db1-2f586fc53b9a",
+								"score": 1
+							},
+							{
+								"id": 2257865835157610,
+								"url": "https://www.sapiens.org/culture/reproductive-rights-abortion-retirees-activism/?utm_source=pocket-newtab-en-us",
+								"title": "Fighting for Reproductive Rights in Retirement",
+								"excerpt": " An anthropologist conducts research in an Arizona retirement community, where older women share hard-won insights.",
+								"publisher": "Sapiens",
+								"raw_image_src": "https://www.sapiens.org/app/uploads/2024/08/03-hand-drawn-thank-you-card-1280x890.jpeg",
+								"recommendation_id": "77744847-28c3-41de-803c-3a16c095de88",
+								"score": 1
+							},
+							{
+								"id": 5142133382757272,
+								"url": "https://faroutmagazine.co.uk/how-tony-leung-became-one-of-cinemas-greatest-ever-actors-by-avoiding-america/?utm_source=pocket-newtab-en-us",
+								"title": "How Tony Leung Became One of Cinema’s Greatest-Ever Actors by Avoiding America",
+								"excerpt": "Tony Leung resisted many overtures from America to become one of cinema’s greatest-ever actors, but that Marvel money is hard to turn down.",
+								"publisher": "Far Out Magazine",
+								"raw_image_src": "https://faroutmagazine.co.uk/static/uploads/1/2024/08/Tony-Leung-Actor-2024-Far-Out-Magazine.jpg",
+								"recommendation_id": "8c67556c-a407-4340-8af9-aa6f5be86268",
+								"score": 1
+							},
+							{
+								"id": 7455203001643896,
+								"url": "https://www.realsimple.com/4-organizing-projects-that-have-the-most-impact-on-your-house-8698852?utm_source=pocket-newtab-en-us",
+								"title": "Organizing These 4 Areas Will Make the Most Impact in Your Home",
+								"excerpt": "Get your priorities straight and focus on organizing the spots that most affect your daily routines.",
+								"publisher": "Real Simple",
+								"raw_image_src": "https://www.realsimple.com/thmb/RQs7J5FwsyZZVSQ85_UkcFJyr28=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/organzing-impacts-home-GettyImages-1315315494-f87acd0fc9514d78894ad0cbdb081cf3.jpg",
+								"recommendation_id": "e24c09ad-4b8d-4427-a7ac-ca21c359c51d",
+								"score": 1
+							},
+							{
+								"id": 6694861518407122,
+								"url": "https://apnews.com/article/tennis-pickleball-us-open-6a95ff52e3646f2dc4d5ddcca9168d94?utm_source=pocket-newtab-en-us",
+								"title": "Does American Tennis Have a Pickleball Problem?",
+								"excerpt": "Pickleball has quickly soared from nearly nothing to 13.6 million U.S. players in just a few years, leading tennis purists to fear a day when it could surpass tennis’ 23.8 million players.",
+								"publisher": "The Associated Press",
+								"raw_image_src": "https://dims.apnews.com/dims4/default/f1786ca/2147483647/strip/true/crop/4724x2657+0+246/resize/1440x810!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2F04%2Fef%2Fdf2f4f5101f7bbbc0594b045f269%2F46db125abe9547ae858e01b2455cefe9",
+								"recommendation_id": "5b2102b0-69e4-486f-a3ed-073fc845a493",
+								"score": 1
+							},
+							{
+								"id": 6493592305708139,
+								"url": "https://getpocket.com/explore/item/vegan-and-vegetarian-diets-may-lack-certain-nutrients-here-s-how-to-get-more-of-them?utm_source=pocket-newtab-en-us",
+								"title": "Vegan and Vegetarian Diets May Lack Certain Nutrients—Here’s How to Get More of Them",
+								"excerpt": "Plant-based diets may lack a number of important nutrients, such as vitamin B12 and iodine.",
+								"publisher": "The Conversation",
+								"raw_image_src": "https://s3.amazonaws.com/pocket-curatedcorpusapi-prod-images/3615cc9a-c743-442e-976b-13352f43ef85.png",
+								"recommendation_id": "46bbbe71-8d2c-4907-80bb-b3fc7094a2d5",
+								"score": 1
+							}
+						],
+						"status": "success"
+					}
+				}
+			},
+			"loaded": true
+		},
+		"spocs": {
+			"spocs_endpoint": "https://spocs.getpocket.com/spocs",
+			"lastUpdated": 1724956971261,
+			"data": {
+				"settings": {
+					"feature_flags": {
+						"collections": false,
+						"spoc_v2": true
+					},
+					"spocsPerNewTabs": 1,
+					"domainAffinityParameterSets": {
+						"default": {
+							"combinedDomainFactor": 0.5,
+							"frequencyFactor": 0.5,
+							"itemScoreFactor": 1,
+							"multiDomainBoost": 0,
+							"perfectCombinedDomainScore": 2,
+							"perfectFrequencyVisits": 10,
+							"recencyFactor": 0.5
+						},
+						"fully-personalized": {
+							"combinedDomainFactor": 0.5,
+							"frequencyFactor": 0.5,
+							"itemScoreFactor": 0.01,
+							"multiDomainBoost": 0,
+							"perfectCombinedDomainScore": 2,
+							"perfectFrequencyVisits": 10,
+							"recencyFactor": 0.5
+						},
+						"fully-personalized-domains": {
+							"combinedDomainFactor": 0.5,
+							"frequencyFactor": 0.5,
+							"itemScoreFactor": 0.01,
+							"multiDomainBoost": 0,
+							"perfectCombinedDomainScore": 10,
+							"perfectFrequencyVisits": 1,
+							"recencyFactor": 0.5
+						}
+					},
+					"timeSegments": [
+						{
+							"id": "week-1",
+							"startTime": 432000,
+							"endTime": 0,
+							"weightPosition": 1
+						},
+						{
+							"id": "week-2",
+							"startTime": 864000,
+							"endTime": 432000,
+							"weightPosition": 1
+						},
+						{
+							"id": "week-3",
+							"startTime": 1296000,
+							"endTime": 864000,
+							"weightPosition": 1
+						},
+						{
+							"id": "week-4",
+							"startTime": 1728000,
+							"endTime": 1296000,
+							"weightPosition": 1
+						},
+						{
+							"id": "week-5",
+							"startTime": 2160000,
+							"endTime": 1728000,
+							"weightPosition": 1
+						},
+						{
+							"id": "week-6",
+							"startTime": 2592000,
+							"endTime": 2160000,
+							"weightPosition": 1
+						}
+					]
+				},
+				"spocs": {
+					"title": "",
+					"context": "",
+					"sponsor": "",
+					"personalized": false,
+					"items": [
+						{
+							"id": 619283587,
+							"flight_id": 581674041,
+							"campaign_id": 59140872,
+							"title": "2 Cards Charging 0% Interest Until 2026",
+							"url": "https://market-trk.com/50/9411?campaign=FF-SOV03-CompareCredit-BoATravel&creative=CCBlondeWomanRed-0InterestUntilNearly2026-WithNoAnnualFeeAndNoInterestUntilNearly2026TheseCardsAreHelpingAmericansPayOffDebtInRecordTime-20240827",
+							"domain": "comparecredit.com",
+							"excerpt": "With no annual fee and no interest until 2026, these cards are helping Americans pay off debt in record time.",
+							"priority": 3,
+							"context": "Sponsored by CompareCredit™",
+							"raw_image_src": "https://s.zkcdn.net/Advertisers/13ad116b3104499ca63d5ab82e855726.png",
+							"image_src": "https://img-getpocket.cdn.mozilla.net/direct?url=https%3A%2F%2Fs.zkcdn.net%2FAdvertisers%2F13ad116b3104499ca63d5ab82e855726.png&resize=w618-h310",
+							"shim": {
+								"impression": "1,eyJ2IjoiMS4xMiIsImF2IjoxOTc1NTY3LCJhdCI6MzYxNywiYnQiOjAsImNtIjo1OTE0MDg3MiwiY2giOjM2ODQ4LCJjayI6e30sImNyIjo0NDQyODkwNTYsImRpIjoiMWFhMTc0MTRhZmYzNGE3MzgwNmY2NDBhYjAyMTJjYTQiLCJkaiI6MCwiaWkiOiI2NTllM2ExOGY1ZDE0MjFkYTg2MzQ5YmM2NWI3NjJhYiIsImRtIjozLCJmYyI6NjE5MjgzNTg3LCJmbCI6NTgxNjc0MDQxLCJpcCI6IjEwNC4xOTguNy4yMTMiLCJrdyI6InVzLHVzLWF6IiwibWsiOiJ1cyIsIm53IjoxMDI1MCwicGMiOjEsIm9wIjoxLCJtcCI6MSwiZWMiOjAsImdtIjowLCJlcCI6bnVsbCwicHIiOjE0NzUxOCwicnQiOjIsInJzIjo1MDAsInNhIjoiNTUiLCJzYiI6ImktMDkzM2Y4N2FiYTk1Njc5YTUiLCJzcCI6ODkxMDM4LCJzdCI6MTA3MDA5OCwidWsiOiJ7ZmIyZmMzNDQtNDQ2Zi00NTQ3LTg5MGEtY2Q5MjYyZTk2M2MzfSIsInpuIjoyMTc3NTgsInRzIjoxNzI0OTU2OTcxMTgxLCJwbiI6InNwb2NzIiwiZ2MiOnRydWUsImdDIjp0cnVlLCJncyI6Im5vbmUiLCJkYyI6MSwidHoiOiJVVEMiLCJiYSI6MSwiZnEiOjF9,9vQ83tnpMd5poXJVlKGfGE-Fwyg",
+								"click": "0,eyJ2IjoiMS4xMiIsImF2IjoxOTc1NTY3LCJhdCI6MzYxNywiYnQiOjAsImNtIjo1OTE0MDg3MiwiY2giOjM2ODQ4LCJjayI6e30sImNyIjo0NDQyODkwNTYsImRpIjoiMWFhMTc0MTRhZmYzNGE3MzgwNmY2NDBhYjAyMTJjYTQiLCJkaiI6MCwiaWkiOiI2NTllM2ExOGY1ZDE0MjFkYTg2MzQ5YmM2NWI3NjJhYiIsImRtIjozLCJmYyI6NjE5MjgzNTg3LCJmbCI6NTgxNjc0MDQxLCJpcCI6IjEwNC4xOTguNy4yMTMiLCJrdyI6InVzLHVzLWF6IiwibWsiOiJ1cyIsIm53IjoxMDI1MCwicGMiOjEsIm9wIjoxLCJtcCI6MSwiZWMiOjAsImdtIjowLCJlcCI6bnVsbCwicHIiOjE0NzUxOCwicnQiOjIsInJzIjo1MDAsInNhIjoiNTUiLCJzYiI6ImktMDkzM2Y4N2FiYTk1Njc5YTUiLCJzcCI6ODkxMDM4LCJzdCI6MTA3MDA5OCwidWsiOiJ7ZmIyZmMzNDQtNDQ2Zi00NTQ3LTg5MGEtY2Q5MjYyZTk2M2MzfSIsInpuIjoyMTc3NTgsInRzIjoxNzI0OTU2OTcxMTgxLCJwbiI6InNwb2NzIiwiZ2MiOnRydWUsImdDIjp0cnVlLCJncyI6Im5vbmUiLCJkYyI6MSwidHoiOiJVVEMiLCJ1ciI6bnVsbH0,DSuOVZODJ06pkJD33eCeQyinnUU",
+								"delete": "",
+								"save": ""
+							},
+							"parameter_set": "default",
+							"caps": {
+								"lifetime": 50,
+								"campaign": {
+									"count": 10,
+									"period": 86400
+								},
+								"flight": {
+									"count": 10,
+									"period": 86400
+								}
+							},
+							"domain_affinities": {},
+							"personalization_models": {
+								"finance": 1,
+								"travel": 1
+							},
+							"min_score": 0.1,
+							"item_score": 0.2,
+							"sponsor": "CompareCredit™",
+							"score": 0.2
+						}
+					]
+				},
+				"sponsored-topsites": {
+					"title": "",
+					"context": "",
+					"items": []
+				}
+			},
+			"loaded": true,
+			"frequency_caps": [],
+			"blocked": [],
+			"placements": [
+				{
+					"name": "sponsored-topsites",
+					"ad_types": [
+						3120
+					],
+					"zone_ids": [
+						280143
+					]
+				},
+				{
+					"name": "spocs",
+					"ad_types": [
+						3617
+					],
+					"zone_ids": [
+						217758,
+						217995
+					]
+				}
+			]
+		},
+		"experimentData": {
+			"utmSource": "pocket-newtab"
+		},
+		"recentSavesData": [],
+		"isUserLoggedIn": false,
+		"recentSavesEnabled": false,
+		"pocketButtonEnabled": true,
+		"saveToPocketCard": true,
+		"hideDescriptions": false,
+		"compactImages": false,
+		"imageGradient": false,
+		"newSponsoredLabel": false,
+		"titleLines": 3,
+		"descLines": 3,
+		"readTime": true
+	},
+	"Search": {
+		"fakeFocus": false,
+		"hide": false
+	}
+};
+
+;74���           f�ÅGD)�����       :about:home alt-data 1;78982,script version 20240419214016  �

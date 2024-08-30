@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<application-state>
+  <context id="">
+    <application id="snap-store_snap-store.desktop" score="134" last-seen="1724960216"/>
+    <application id="org.gnome.Nautilus.desktop" score="29" last-seen="1724958877"/>
+    <application id="gnome-initial-setup.desktop" score="5" last-seen="1724902043"/>
+    <application id="code_code.desktop" score="24" last-seen="1724960303"/>
+    <application id="firefox_firefox.desktop" score="95" last-seen="1724957728"/>
+    <application id="org.gnome.Terminal.desktop" score="826" last-seen="1724961875"/>
+    <application id="xdg-desktop-portal-gnome.desktop" score="8" last-seen="1724957729"/>
+  </context>
+</application-state>

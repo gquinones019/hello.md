@@ -1,0 +1,13 @@
+9
+
+https://discourse.ubuntu.com/
+https://discourse.ubuntu.com/service-worker.js
+true
+{c388e2ba-2867-4531-8f88-1a2ee77f7cd0}
+0
+1724902021963445
+1724902021963713
+1724902020739409
+0
+true
+#

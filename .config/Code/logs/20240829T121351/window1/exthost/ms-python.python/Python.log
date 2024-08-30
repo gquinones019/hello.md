@@ -1,0 +1,41 @@
+2024-08-29 12:15:51.539 [info] Experiment 'pythonCreateEnvOnPipInstall' is active
+2024-08-29 12:15:51.539 [info] Experiment 'pythonRecommendTensorboardExt' is active
+2024-08-29 12:15:51.539 [info] Experiment 'pythonTerminalEnvVarActivation' is active
+2024-08-29 12:15:51.539 [info] Experiment 'pythonTestAdapter' is active
+2024-08-29 12:15:52.092 [info] Starting Environment refresh
+2024-08-29 12:15:52.092 [info] Searching for interpreters in posix paths locator
+2024-08-29 12:15:52.114 [info] Searching for pyenv environments
+2024-08-29 12:15:52.114 [info] Searching for conda environments
+2024-08-29 12:15:52.121 [info] Searching for global virtual environments
+2024-08-29 12:15:52.121 [info] Searching for custom virtual environments
+2024-08-29 12:15:53.117 [info] pyenv is not installed
+2024-08-29 12:15:53.117 [info] Finished searching for pyenv environments: 1023 milliseconds
+2024-08-29 12:15:53.120 [info] Finished searching for custom virtual envs: 1014 milliseconds
+2024-08-29 12:15:53.138 [info] > conda info --json
+2024-08-29 12:15:53.231 [info] Finished searching for global virtual envs: 1126 milliseconds
+2024-08-29 12:15:53.318 [info] Found: /bin/python3 --> /bin/python3.12
+2024-08-29 12:15:53.326 [info] Found: /bin/python3.12 --> /bin/python3.12
+2024-08-29 12:15:53.367 [info] Found: /usr/bin/python3 --> /usr/bin/python3.12
+2024-08-29 12:15:53.367 [info] Found: /usr/bin/python3.12 --> /usr/bin/python3.12
+2024-08-29 12:15:53.401 [info] Finished searching for interpreters in posix paths locator: 1316 milliseconds
+2024-08-29 12:15:53.401 [info] > /bin/python3 -I ~/.vscode/extensions/ms-python.python-2024.12.3-linux-x64/python_files/get_output_via_markers.py ~/.vscode/extensions/ms-python.python-2024.12.3-linux-x64/python_files/interpreterInfo.py
+2024-08-29 12:15:53.458 [info] > /usr/bin/python3 -I ~/.vscode/extensions/ms-python.python-2024.12.3-linux-x64/python_files/get_output_via_markers.py ~/.vscode/extensions/ms-python.python-2024.12.3-linux-x64/python_files/interpreterInfo.py
+2024-08-29 12:15:53.459 [info] Environments refresh paths discovered (event): 1378 milliseconds
+2024-08-29 12:15:53.459 [info] Environments refresh paths discovered: 1379 milliseconds
+2024-08-29 12:15:53.576 [info] Environments refresh finished (event): 1496 milliseconds
+2024-08-29 12:15:53.585 [info] Environment refresh took 1506 milliseconds
+2024-08-29 12:15:53.590 [info] > pixi --version
+2024-08-29 12:15:53.592 [error] [Error: spawn pixi ENOENT
+	at ChildProcess._handle.onexit (node:internal/child_process:286:19)
+	at onErrorNT (node:internal/child_process:484:16)
+	at process.processTicksAndRejections (node:internal/process/task_queues:82:21)] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'spawn pixi',
+  path: 'pixi',
+  spawnargs: [ '--version' ]
+}
+2024-08-29 12:15:53.592 [warning] could not find a pixi interpreter for the interpreter at /bin/python3
+2024-08-29 12:15:53.626 [info] Python interpreter path: /bin/python3
+2024-08-29 12:15:53.642 [warning] could not find a pixi interpreter for the interpreter at /bin/python3
+2024-08-29 12:15:54.881 [info] Starting Pylance language server.

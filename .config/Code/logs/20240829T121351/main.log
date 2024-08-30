@@ -1,0 +1,9 @@
+2024-08-29 12:13:52.131 [info] update#setState idle
+2024-08-29 12:14:22.137 [info] update#setState checking for updates
+2024-08-29 12:14:22.162 [info] update#setState idle
+2024-08-29 12:15:40.625 [error] Blocked vscode-webview request vscode-webview://1e14642tjsheju973q3heoau7ospe3co4o502viv10lks2mfrql8/index.html?id=8b5fd551-1fc3-4779-a582-6dc6b053eb4b&origin=8b5fd551-1fc3-4779-a582-6dc6b053eb4b&swVersion=4&extensionId=&platform=electron&vscode-resource-base-authority=vscode-resource.vscode-cdn.net&parentOrigin=vscode-file%3A%2F%2Fvscode-app&disableServiceWorker=true
+2024-08-29 12:36:40.753 [warning] No ptyHost heartbeat after 6 seconds
+2024-08-29 12:49:26.808 [warning] No ptyHost heartbeat after 6 seconds
+2024-08-29 13:04:18.805 [warning] No ptyHost heartbeat after 6 seconds
+2024-08-29 13:14:22.161 [info] update#setState checking for updates
+2024-08-29 13:14:22.174 [info] update#setState idle
